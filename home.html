@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+  integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 <body>
 
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(154, 33, 32);">
@@ -20,12 +22,10 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registro">
-                        Registrate aquí
-                      </a>
+                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#registro">Registrarse</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">Iniciar Sesión</a>
+                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modelId" >Iniciar Sesión</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -182,6 +182,61 @@
             <button type="submit" id = "btnregistro" class="btn btn-success mt-3" >Registrarse</button>
              <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
             </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- Modal Login-->
+   <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="form-group">
+              <label for="">Correo</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-user    "></i></span>
+                </div>
+                <input type="text" class="col-10 form-control" name="" id="CorreoLog" aria-describedby="helpId"
+                  placeholder="correo registrado">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1"><i class="fas fa-key    "></i></span>
+                </div>
+                <input type="password" class="col-10 form-control" name="" id="PasswordLog" aria-describedby="helpId"
+                  placeholder="correo registrado">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="controls">
+                <button type="button" class="btn btn-success" id="btnLogin" data-dismiss="modal">Login</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-12 control">
+                <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%">
+                  No tienes cuenta!
+                  <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registro">
+                    Registrate aquí
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
