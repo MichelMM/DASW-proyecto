@@ -3,7 +3,7 @@
     "id": 1,
     "name": "nombre1",
     "cellphone": "11111111",
-    "email": "n1@gmail.com",
+    "mail": "n1@gmail.com",
       "personalAdd": {
         "street":"",
         "city": "",
