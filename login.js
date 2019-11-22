@@ -28,7 +28,7 @@ loginButton.addEventListener("click", function (event) {
 
 function loginDatos(datos, cbOk, cbErr) {
     let xhr = new XMLHttpRequest();
-    xhr.open('GET', `http://localhost:3000/usuario?mail=${datos.mail}`);
+    xhr.open('GET', `http://localhost:3000/Contratista?mail=${datos.mail}`);
     xhr.send([JSON.stringify(datos)]);
     xhr.onload = function () {
         if (xhr.status != 200) {
