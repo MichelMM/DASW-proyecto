@@ -4,8 +4,18 @@
     "name": "nombre1",
     "cellphone": "11111111",
     "email": "n1@gmail.com",
-    "personalAdd": "kjdcñqwbvd",
-    "companyAdd": "añwdnñldv",
+    "adresses": {
+      "personalAdd": {
+        "city": "",
+        "country": "",
+        "CP": ""
+      },
+      "companyAdd": {
+        "city": "",
+        "country": "",
+        "CP": ""
+      }
+    },
     "payInfo": "9envonevonqoenvo2neiprvnoipenovi2eoiv",
     "billingInfo": "lvndwoncuqiodcnilqbevonqwnvoqndiovn"
   }],
