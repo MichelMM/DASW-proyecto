@@ -1,53 +1,88 @@
 {
-  "usuario": [
-    {
-      "name": "Michel",
-      "lastname": "Maris Mora",
-      "company": "ITESO",
-      "mail": "mmich91@iteso.mx",
-      "user": "Michel",
-      "password": "12345",
-      "cellphone": "3313519904",
-      "city": "Guadalajara",
-      "cp": "44540",
-      "rfc": "MAMM990209HJCRRC07",
-      "id": 1
+  "Contratista": [{
+    "id": 1,
+    "name": "nombre1",
+    "cellphone": "11111111",
+    "email": "n1@gmail.com",
+    "personalAdd": "kjdcñqwbvd",
+    "companyAdd": "añwdnñldv",
+    "payInfo": "9envonevonqoenvo2neiprvnoipenovi2eoiv",
+    "billingInfo": "lvndwoncuqiodcnilqbevonqwnvoqndiovn"
+  }],
+  "Operador": [{
+    "id": 1,
+    "name": "typicode",
+    "licensePDF": "url1",
+    "officialID": "urlIMG_ID",
+    "noCRB": "urlIMG_CRB",
+    "operatorIMG": "img_OP",
+    "previousJobs": [{
+      "company": "comName",
+      "timeWorked": "365 hrs",
+      "machinesOperated": [{
+          "name": "mach1",
+          "model": "model1"
+        },
+        {
+          "name": "mach2",
+          "model": "model2"
+        },
+        {
+          "name": "mach3",
+          "model": "model3"
+        },
+        {
+          "name": "mach4",
+          "model": "model4"
+        }
+      ],
+      "recomendationCard": "urlCARD",
+      "referenceContact": "contact1"
+    }],
+    "machinesOperated": [{
+        "name": "mach1",
+        "model": "model1"
+      },
+      {
+        "name": "mach2",
+        "model": "model2"
+      },
+      {
+        "name": "mach3",
+        "model": "model3"
+      },
+      {
+        "name": "mach4",
+        "model": "model4"
+      }
+    ],
+    "certificate": {
+      "yearsExperience": "365hrs",
+      "recommendationCard": "PDF",
+      "referenceContact": "PDF",
+      "comments": "extra"
     },
-    {
-      "name": "Miguel",
-      "lastname": "Maris Mora",
-      "company": "ITESO",
-      "mail": "mmich91@iteso.mx",
-      "user": "Michel",
-      "password": "12345",
-      "cellphone": "3313519904",
-      "city": "Guadalajara",
-      "cp": "44540",
-      "rfc": "MAMM990209HJCRRC07",
-      "id": 3
-    },
-    {
-      "name": "Kevin",
-      "lastname": "Moreno",
-      "mail": "B@gmail.com",
-      "password": "1",
-      "cellphone": "3317195308",
-      "city": "Guadalajara",
-      "cp": "45040",
-      "rfc": "ITESO",
-      "id": 100,
-      "company": "",
-      "user": "Kevin"
-    }
-  ],
-  "comments": [
+    "available": "perHour"
+  }],
+  "Maquinaria": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "type": "type1",
+      "category": "cat1",
+      "brand": "brand1",
+      "specifications": "PDF",
+      "timeUsed": "DateType"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "Comentarios": [
+    {
+      "id": 1,
+      "comment": "perdí"
+    }
+  ],
+  "Conversacion": [
+    {
+      "id": 1
+    }
+  ]
 }
