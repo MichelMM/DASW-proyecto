@@ -20,69 +20,48 @@
       "company": "comName",
       "timeWorked": "365 hrs",
       "machinesOperated": [{
-          "name": "mach1",
-          "model": "model1"
+          "id": 1
         },
         {
-          "name": "mach2",
-          "model": "model2"
+          "id": 2
         },
         {
-          "name": "mach3",
-          "model": "model3"
+          "id": 3
         },
         {
-          "name": "mach4",
-          "model": "model4"
+          "id": 4
         }
       ],
       "recomendationCard": "urlCARD",
       "referenceContact": "contact1"
     }],
     "machinesOperated": [{
-        "name": "mach1",
-        "model": "model1"
+        "id": 1
       },
       {
-        "name": "mach2",
-        "model": "model2"
-      },
-      {
-        "name": "mach3",
-        "model": "model3"
-      },
-      {
-        "name": "mach4",
-        "model": "model4"
+        "id": 2
       }
     ],
     "certificate": {
       "yearsExperience": "365hrs",
       "recommendationCard": "PDF",
-      "referenceContact": "PDF",
-      "comments": "extra"
+      "referenceContact": "PDF"
     },
     "available": "perHour"
   }],
-  "Maquinaria": [
-    {
-      "id": 1,
-      "type": "type1",
-      "category": "cat1",
-      "brand": "brand1",
-      "specifications": "PDF",
-      "timeUsed": "DateType"
-    }
-  ],
-  "Comentarios": [
-    {
-      "id": 1,
-      "comment": "perdí"
-    }
-  ],
-  "Conversacion": [
-    {
-      "id": 1
-    }
-  ]
+  "Maquinaria": [{
+    "id": 1,
+    "type": "type1",
+    "category": "cat1",
+    "brand": "brand1",
+    "specifications": "PDF",
+    "timeUsed": "DateType"
+  }],
+  "Comentarios": [{
+    "id": 1,
+    "comment": "perdí"
+  }],
+  "Conversacion": [{
+    "id": 1
+  }]
 }
