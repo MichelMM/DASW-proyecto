@@ -26,9 +26,6 @@
                 <li class="nav-item">
                     <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modalLogin" >Iniciar Sesión</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modalPrueba">Prueba</a>
-                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -123,72 +120,114 @@
     </div>
  <!-- Modal Registro-->
  <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Registro</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Registro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" >
+          <div class="form-check form-check-inline">
+              <label id="radiobtn" class="form-check-label">
+                  <input class="form-check-input" type="radio" name="UserType" id="UserType1" value="Operador" checked required> Operador
+                  <input class="form-check-input" type="radio" name="UserType" id="UserType2" value="Contratista" required> Contratista
+                </label>
+          </div>
+        <div id="forms">
+        <form id="formContratista" action="" hidden>
+          <div class="form-group">
+            <label for="inputName">Nombre</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Nombre" required>
         </div>
-        <div class="modal-body">
-          <form id="form" action="">
+        <div class="form-group">
+            <label for="inputName">Apellido(s)</label>
+            <input type="text" class="form-control" id="inputApellido" placeholder="Apellido(s)" required>
+        </div>
+        <div class="form-group">
+          <label for="inputTel">Teléfono</label>
+          <input type="tel" name="phone" class="form-control" id = "phone" pattern="[0-9]{10}" required placeholder="10 Dígitos">
+      </div>
+        <div class="form-group">
+            <label for="inputEmail3">Email</label>
+            <input type="email" class="form-control" id="inputEmail3" placeholder="email@gmail.com" required>
+        </div>
+        <div id="PersonalAddress">
+          <p><b>Dirección Personal</b></p>
+        <div class="form-group">
+          <label for="Pstreet">Calle</label>
+          <input type="text" class="form-control" id="Pstreet" placeholder="Calle y Número" required>
+        </div>
+        <div class="form-group">
+            <label for="">Ciudad</label>
+            <select class="form-control" name="" id="Pcity" required>
+                <option>Guadalajara</option>
+                <option>Monterrey</option>
+                <option>CDMX</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="PCP">Código Postal</label>
+            <input type="text" pattern = "[0-9]{5}" class="form-control" id="PCP" placeholder="Código Postal" required>
+        </div>
+        </div>
+        <div class="form-group">
+            <label for="Cname">Nombre de Compañia</label>
+            <input type="text"  class="form-control" id="Cname" placeholder="Compañia" required>
+        </div>
+        <div id="CompanyAddress">
+            <p><b>Dirección de Compañia</b></p>
+          <div class="form-group">
+            <label for="Cstreet">Calle</label>
+            <input type="text" class="form-control" id="Cstreet" placeholder="Calle y Número" required>
+          </div>
+          <div class="form-group">
+              <label for="">Ciudad</label>
+              <select class="form-control" name="" id="Ccity" required>
+                  <option>Guadalajara</option>
+                  <option>Monterrey</option>
+                  <option>CDMX</option>
+              </select>
+          </div>
+          <div class="form-group">
+              <label for="CCP">Código Postal</label>
+              <input type="text" pattern = "[0-9]{5}" class="form-control" id="CCP" placeholder="Código Postal" required>
+          </div>
+          </div>
+          <div class="form-group">
+              <label for="payInfo">Información de Pago</label>
+              <input type="text" class="form-control" id="payInfo" placeholder="Información de Pago" required> 
+          </div>
+        <div class="form-group">
+            <label for="RFC">RFC</label>
+            <input type="text" class="form-control" id="RFC" placeholder="RFC" required> 
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3">Contraseña</label>
+            <input type="password" class="form-control" id="password1" placeholder="password" title="At least 6 characters with letters and numbers" required>
+        </div>
+        <div class="form-group">
+            <label for="inputVerify3">Verify</label>
+            <input type="password" class="form-control" id="password2" placeholder="password (again)" required>
+        </div>
+        
+          <button type="submit" id = "BtnRegContratista" class="btn btn-success mt-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin" >Registrarse</button>
+           <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
+          </form>
+          <form id="formOperador" action="" >
             <div class="form-group">
                 <label for="inputName">Nombre</label>
-                <input type="text" class="form-control" id="inputName" placeholder="Nombre" required>
+                <input type="text" class="form-control" id="inputNameO" placeholder="Nombre" required>
             </div>
-            <div class="form-group">
-                <label for="inputName">Apellido(s)</label>
-                <input type="text" class="form-control" id="inputApellido" placeholder="Apellido(s)" required>
-            </div>
-            <div class="form-group">
-                <label for="inputEmail3">Email</label>
-                <input type="email" class="form-control" id="inputEmail3" placeholder="email@gmail.com" required>
-            </div>
-            <div class="form-group">
-                <label for="inputPassword3">Contraseña</label>
-                <input type="password" class="form-control" id="password1" placeholder="password" title="At least 6 characters with letters and numbers" required>
-            </div>
-            <div class="form-group">
-                <label for="inputVerify3">Verify</label>
-                <input type="password" class="form-control" id="password2" placeholder="password (again)" required>
-            </div>
-            <div class="form-group">
-                <label for="inputTel">Teléfono</label>
-                <input type="tel" name="phone" class="form-control" id = "phone" pattern="[0-9]{10}" required placeholder="10 Dígitos">
-            </div>
-            <div class="form-group">
-                <label for="">Ciudad</label>
-                <select class="form-control" name="" id="city" required>
-                    <option>Guadalajara</option>
-                    <option>Monterrey</option>
-                    <option>CDMX</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="CP">Código Postal</label>
-                <input type="text" pattern = "[0-9]{5}" class="form-control" id="CP" placeholder="Código Postal" required>
-            </div>
-            <div class="form-group">
-                <label for="RFC">RFC</label>
-                <input type="text" class="form-control" id="RFC" placeholder="RFC" required> 
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="tipo" id="tipo1" value="checkedValue" required> Operador
-                    <input class="form-check-input" type="radio" name="tipo" id="tipo2" value="checkedValue" required> Contratista
-                </label>
-            </div>
-              <input type="url" name="" id="newURL" class="form-control mt-3" placeholder="Url de imagen de perfil" aria-describedby="helpId" required>
-
-            <button type="submit" id = "btnregistro" class="btn btn-success mt-3">Registrarse</button>
+            <button type="submit" id = "BtnRegOperador" class="btn btn-success mt-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin" >Registrarse</button>
              <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
             </form>
-        </div>
+          </div>
       </div>
     </div>
   </div>
-
+</div>
    <!-- Modal Login-->
    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -245,51 +284,7 @@
   </div>
 
      <!-- Modal Prueba-->
-  <div class="modal fade" id="modalPrueba" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Registro</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" >
-            <div class="form-check form-check-inline">
-                <label id="radiobtn" class="form-check-label">
-                    <input class="form-check-input" type="radio" name="UserType" id="UserType1" value="Operador" checked required> Operador
-                    <input class="form-check-input" type="radio" name="UserType" id="UserType2" value="Contratista" required> Contratista
-                    <input class="form-check-input" type="radio" name="UserType" id="UserType3" value="Maquina" required> Maquina
-                </label>
-            </div>
-          <form id="formContratista" action="" hidden>
-            <div class="form-group">
-                <label for="inputName">Contratista</label>
-                <input type="text" class="form-control" id="inputNameC" placeholder="Nombre" required>
-            </div>
-            <button type="submit" id = "RegContratista" class="btn btn-success mt-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin" >Registrarse</button>
-             <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
-            </form>
-            <form id="formOperador" action="" >
-              <div class="form-group">
-                  <label for="inputName">Operador</label>
-                  <input type="text" class="form-control" id="inputNameO" placeholder="Nombre" required>
-              </div>
-              <button type="submit" id = "RegOperador" class="btn btn-success mt-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin" >Registrarse</button>
-               <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
-              </form>
-              <form id="formMaquina" action="" hidden >
-                <div class="form-group">
-                    <label for="inputName">Maquina</label>
-                    <input type="text" class="form-control" id="inputNameM" placeholder="Nombre" required>
-                </div>
-                <button type="submit" id = "RegMaquina" class="btn btn-success mt-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin" >Registrarse</button>
-                 <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
-                </form>
-        </div>
-      </div>
-    </div>
-  </div>
+  
     <!-- Optional JavaScript -->
     <script src="./registro.js"></script>
     <script src="./login.js"></script>

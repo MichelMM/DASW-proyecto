@@ -1,10 +1,9 @@
 let modal=document.getElementById('registro');
-let form=document.getElementById('form');
-let btnregistro=document.getElementById("btnregistro");
+let BtnRegContratista=document.getElementById("BtnRegContratista");
+let BtnRegOperador=document.getElementById("BtnRegOperador");
 let UserType=document.getElementById("radiobtn");
 let formContratista=document.getElementById('formContratista');
 let formOperador=document.getElementById('formOperador');
-let formMaquina=document.getElementById('formMaquina');
 
 
 
@@ -13,32 +12,48 @@ function ChangeForm(){
 let radio=document.querySelector('input[name="UserType"]:checked').value;
 formContratista.setAttribute('hidden',"");
 formOperador.setAttribute('hidden',"");
-formMaquina.setAttribute('hidden',"");
 if(radio=='Operador'){
     formOperador.removeAttribute('hidden');
 }
 if(radio=='Contratista'){
     formContratista.removeAttribute('hidden');
 }
-if(radio=='Maquina'){ 
-    formMaquina.removeAttribute('hidden');
-}
 }
 
-form.addEventListener("change",campos);
-function campos(){
-    let notValid = form.querySelectorAll(":invalid");
-    let valid = form.querySelectorAll(":valid");
+formContratista.addEventListener("change",camposContratista);
+formContratista.addEventListener("change",camposOperador);
+function camposContratista(){
+    let notValid = formContratista.querySelectorAll(":invalid");
+    let valid = formContratista.querySelectorAll(":valid");
     let password1 = document.getElementById('password1');
     let password2 = document.getElementById('password2');
     notValid.forEach(function (element){
         element.style.border = '1px solid #ff0000';
-        form.querySelector('button').disabled = true;
+        formContratista.querySelector('button').disabled = true;
     });
     if (notValid.length == 0 && password1.value == password2.value) {
-        form.querySelector('button').disabled = false;
+        formContratista.querySelector('button').disabled = false;
     }else if(notValid.length != 0 || password1.value != password2.value){
-        form.querySelector('button').disabled = true;
+        formContratista.querySelector('button').disabled = true;
+    }
+
+    valid.forEach(function(element){
+        element.style.border = '1px solid #ced4da';
+    });
+}
+function camposOperador(){
+    let notValid = formOperador.querySelectorAll(":invalid");
+    let valid = formOperador.querySelectorAll(":valid");
+    let password1 = document.getElementById('password1');
+    let password2 = document.getElementById('password2');
+    notValid.forEach(function (element){
+        element.style.border = '1px solid #ff0000';
+        formOperador.querySelector('button').disabled = true;
+    });
+    if (notValid.length == 0 && password1.value == password2.value) {
+        formOperador.querySelector('button').disabled = false;
+    }else if(notValid.length != 0 || password1.value != password2.value){
+        formOperador.querySelector('button').disabled = true;
     }
 
     valid.forEach(function(element){
@@ -46,36 +61,91 @@ function campos(){
     });
 }
 
-btnregistro.addEventListener("click",function (event){
+BtnRegContratista.addEventListener("click",function (event){
     let objeto = {
+        id: document.getElementById("phone").value,
         name: document.getElementById("inputName").value,
         lastname: document.getElementById("inputApellido").value,
-        mail: document.getElementById("inputEmail3").value,
-        password: document.getElementById('password1').value,
         cellphone: document.getElementById("phone").value,
-        city: document.getElementById("city").value,
-        cp: document.getElementById("CP").value,
+        mail: document.getElementById("inputEmail3").value,
+        personalAdd:{
+            street:document.getElementById("Pstreet").value,
+            city:document.getElementById("Pcity").value,
+            state: (document.getElementById("Pcity").value == "Guadalajara")?"Jalisco":(document.getElementById("city").value == "Monterrey")?"Nuevo Leon":"Ciudad de México",
+            CP:document.getElementById("PCP").value,
+        },
+        companyName:document.getElementById("Cname").value,
+        companyAdd:{
+            street:document.getElementById("Cstreet").value,
+            city:document.getElementById("Ccity").value,
+            state: (document.getElementById("Ccity").value == "Guadalajara")?"Jalisco":(document.getElementById("city").value == "Monterrey")?"Nuevo Leon":"Ciudad de México",
+            CP:document.getElementById("CCP").value,
+        },
+        payInfo:document.getElementById("payInfo").value,
         rfc: document.getElementById("RFC").value,
-        type: (document.getElementById("tipo1").checked == true)?"operador":"contratista",
-        id: document.getElementById("phone").value,
-        company: "",
         user: document.getElementById("inputName").value,
+        password: document.getElementById('password1').value
     }
-    registrarDatos(objeto);
+    registrarContratista(objeto);
     event.preventDefault();
 });
 
-function registrarDatos(datos) {
+
+BtnRegOperador.addEventListener("click",function (event){
+    let objeto = {
+        id: document.getElementById("phone").value,
+        name: document.getElementById("inputName").value,
+        lastname: document.getElementById("inputApellido").value,
+        cellphone: document.getElementById("phone").value,
+        mail: document.getElementById("inputEmail3").value,
+        personalAdd:{
+            street:document.getElementById("Pstreet").value,
+            city:document.getElementById("Pcity").value,
+            state: (document.getElementById("Pcity").value == "Guadalajara")?"Jalisco":(document.getElementById("city").value == "Monterrey")?"Nuevo Leon":"Ciudad de México",
+            CP:document.getElementById("PCP").value,
+        },
+        companyName:document.getElementById("Cname").value,
+        companyAdd:{
+            street:document.getElementById("Cstreet").value,
+            city:document.getElementById("Ccity").value,
+            state: (document.getElementById("Ccity").value == "Guadalajara")?"Jalisco":(document.getElementById("city").value == "Monterrey")?"Nuevo Leon":"Ciudad de México",
+            CP:document.getElementById("CCP").value,
+        },
+        payInfo:document.getElementById("payInfo").value,
+        rfc: document.getElementById("RFC").value,
+        user: document.getElementById("inputName").value,
+        password: document.getElementById('password1').value
+    }
+    registrarOperador(objeto);
+    event.preventDefault();
+});
+
+function registrarContratista(datos) {
     event.preventDefault();
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', "http://localhost:3000/usuario");
+    xhr.open('POST', "http://localhost:3000/Contratista");
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.send([JSON.stringify(datos)]);
     xhr.onload = function () {
         if (xhr.status != 201) {
             alert(xhr.status + ': ' + xhr.statusText  + 'Error, no se ha podido registrar el usuario');
         } else {
-            alert(xhr.responseText+'\n El usuario ha sido registrado con éxito');
+            alert(xhr.responseText+'\n El Contratista ha sido registrado con éxito');
+        }
+    };
+}
+
+function registrarOperador(datos) {
+    event.preventDefault();
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', "http://localhost:3000/Operador");
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send([JSON.stringify(datos)]);
+    xhr.onload = function () {
+        if (xhr.status != 201) {
+            alert(xhr.status + ': ' + xhr.statusText  + 'Error, no se ha podido registrar el usuario');
+        } else {
+            alert(xhr.responseText+'\n El Operador ha sido registrado con éxito');
         }
     };
 }
