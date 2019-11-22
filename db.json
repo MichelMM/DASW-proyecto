@@ -11,7 +11,6 @@
       "city": "Guadalajara",
       "cp": "44540",
       "rfc": "MAMM990209HJCRRC07",
-      "type": "contratista",
       "id": 1
     },
     {
@@ -25,7 +24,6 @@
       "city": "Guadalajara",
       "cp": "44540",
       "rfc": "MAMM990209HJCRRC07",
-      "type": "contratista",
       "id": 3
     },
     {
@@ -37,38 +35,9 @@
       "city": "Guadalajara",
       "cp": "45040",
       "rfc": "ITESO",
-      "type": "operador",
       "id": 100,
       "company": "",
       "user": "Kevin"
-    },
-    {
-      "name": "Kevin",
-      "lastname": "Moreno",
-      "mail": "beto@gmail.com",
-      "password": "1",
-      "cellphone": "3317195300",
-      "city": "Guadalajara",
-      "cp": "45040",
-      "rfc": "ITESO",
-      "type": "operador",
-      "id": "3317195300",
-      "company": "",
-      "user": "Kevin"
-    },
-    {
-      "name": "Jorge",
-      "lastname": "Dong",
-      "mail": "dong@gmail.com",
-      "password": "1",
-      "cellphone": "3311719037",
-      "city": "CDMX",
-      "cp": "46789",
-      "rfc": "1234567890",
-      "type": "operador",
-      "id": "3311719037",
-      "company": "",
-      "user": "Jorge"
     }
   ],
   "comments": [
