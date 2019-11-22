@@ -1,79 +1,96 @@
 {
-  "Contratista": [{
-    "id": 1,
-    "name": "nombre1",
-    "cellphone": "11111111",
-    "mail": "n1@gmail.com",
+  "Contratista": [
+    {
+      "id": "3317195308",
+      "name": "Kevin",
+      "lastname": "Moreno",
+      "cellphone": "3317195308",
+      "mail": "B@gmail.com",
       "personalAdd": {
-        "street":"",
-        "city": "",
-        "state": "",
-        "CP": ""
+        "street": "Roberto Cuellar 4263",
+        "city": "Guadalajara",
+        "state": "Jalisco",
+        "CP": "45040"
       },
-    "companyName":"",
+      "companyName": "2m",
       "companyAdd": {
-        "street":"",
-        "city": "",
-        "state": "",
-        "CP": ""
+        "street": "Roberto Cuellar 4263",
+        "city": "Guadalajara",
+        "state": "Jalisco",
+        "CP": "45040"
       },
-    "payInfo": "9envonevonqoenvo2neiprvnoipenovi2eoiv",
-    "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn"
-  }],
-  "Operador": [{
-    "id": 1,
-    "name": "typicode",
-    "licensePDF": "url1",
-    "officialID": "urlIMG_ID",
-    "noCRB": "urlIMG_CRB",
-    "operatorIMG": "img_OP",
-    "previousJobs": [{
-      "company": "comName",
-      "timeWorked": "365 hrs",
-      "machinesOperated": [{
+      "payInfo": "jijijiji9898",
+      "rfc": "ITESO",
+      "user": "Kevin",
+      "password": "1"
+    }
+  ],
+  "Operador": [
+    {
+      "id": 1,
+      "name": "typicode",
+      "licensePDF": "url1",
+      "officialID": "urlIMG_ID",
+      "noCRB": "urlIMG_CRB",
+      "operatorIMG": "img_OP",
+      "previousJobs": [
+        {
+          "company": "comName",
+          "timeWorked": "365 hrs",
+          "machinesOperated": [
+            {
+              "id": 1
+            },
+            {
+              "id": 2
+            },
+            {
+              "id": 3
+            },
+            {
+              "id": 4
+            }
+          ],
+          "recomendationCard": "urlCARD",
+          "referenceContact": "contact1"
+        }
+      ],
+      "machinesOperated": [
+        {
           "id": 1
         },
         {
           "id": 2
-        },
-        {
-          "id": 3
-        },
-        {
-          "id": 4
         }
       ],
-      "recomendationCard": "urlCARD",
-      "referenceContact": "contact1"
-    }],
-    "machinesOperated": [{
-        "id": 1
+      "certificate": {
+        "yearsExperience": "365hrs",
+        "recommendationCard": "PDF",
+        "referenceContact": "PDF"
       },
-      {
-        "id": 2
-      }
-    ],
-    "certificate": {
-      "yearsExperience": "365hrs",
-      "recommendationCard": "PDF",
-      "referenceContact": "PDF"
-    },
-    "available": "perHour"
-  }],
-  "Maquinaria": [{
-    "id": 1,
-    "type": "type1",
-    "category": "cat1",
-    "brand": "brand1",
-    "specifications": "PDF",
-    "timeUsed": "DateType"
-  }],
-  "Comentarios": [{
-    "id": 1,
-    "comment": "perdí",
-    "rate": 4
-  }],
-  "Conversacion": [{
-    "id": 1
-  }]
+      "available": "perHour"
+    }
+  ],
+  "Maquinaria": [
+    {
+      "id": 1,
+      "type": "type1",
+      "category": "cat1",
+      "brand": "brand1",
+      "specifications": "PDF",
+      "timeUsed": "DateType"
+    }
+  ],
+  "Comentarios": [
+    {
+      "id": 1,
+      "comment": "perdí",
+      "rate": 4
+    }
+  ],
+  "Conversacion": [
+    {
+      "id": 1
+    }
+  ]
 }
