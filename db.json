@@ -5,11 +5,13 @@
     "cellphone": "11111111",
     "email": "n1@gmail.com",
       "personalAdd": {
+        "street":"",
         "city": "",
         "state": "",
         "CP": ""
       },
       "companyAdd": {
+        "street":"",
         "city": "",
         "state": "",
         "CP": ""
