@@ -6,7 +6,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -25,7 +24,10 @@
                     <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#registro">Registrarse</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modelId" >Iniciar Sesión</a>
+                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modalLogin" >Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#modalPrueba">Prueba</a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -179,7 +181,7 @@
             </div>
               <input type="url" name="" id="newURL" class="form-control mt-3" placeholder="Url de imagen de perfil" aria-describedby="helpId" required>
 
-            <button type="submit" id = "btnregistro" class="btn btn-success mt-3" >Registrarse</button>
+            <button type="submit" id = "btnregistro" class="btn btn-success mt-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin" >Registrarse</button>
              <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
             </form>
         </div>
@@ -188,7 +190,7 @@
   </div>
 
    <!-- Modal Login-->
-   <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+   <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -237,6 +239,53 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+     <!-- Modal Prueba-->
+  <div class="modal fade" id="modalPrueba" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Registro</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" >
+            <div class="form-check form-check-inline">
+                <label id="radiobtn" class="form-check-label">
+                    <input class="form-check-input" type="radio" name="UserType" id="UserType1" value="Operador" checked required> Operador
+                    <input class="form-check-input" type="radio" name="UserType" id="UserType2" value="Contratista" required> Contratista
+                    <input class="form-check-input" type="radio" name="UserType" id="UserType3" value="Maquina" required> Maquina
+                </label>
+            </div>
+          <form id="formContratista" action="" hidden>
+            <div class="form-group">
+                <label for="inputName">Contratista</label>
+                <input type="text" class="form-control" id="inputNameC" placeholder="Nombre" required>
+            </div>
+            <button type="submit" id = "RegContratista" class="btn btn-success mt-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin" >Registrarse</button>
+             <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
+            </form>
+            <form id="formOperador" action="" >
+              <div class="form-group">
+                  <label for="inputName">Operador</label>
+                  <input type="text" class="form-control" id="inputNameO" placeholder="Nombre" required>
+              </div>
+              <button type="submit" id = "RegOperador" class="btn btn-success mt-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin" >Registrarse</button>
+               <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
+              </form>
+              <form id="formMaquina" action="" hidden >
+                <div class="form-group">
+                    <label for="inputName">Maquina</label>
+                    <input type="text" class="form-control" id="inputNameM" placeholder="Nombre" required>
+                </div>
+                <button type="submit" id = "RegMaquina" class="btn btn-success mt-3" href="#" data-dismiss="modal" data-toggle="modal" data-target="#modalLogin" >Registrarse</button>
+                 <button type="button" class="btn btn-secondary mt-3" data-dismiss="modal">Close</button>
+                </form>
         </div>
       </div>
     </div>

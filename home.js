@@ -1,8 +1,31 @@
 let modal=document.getElementById('registro');
-console.log(modal);
 let form=document.getElementById('form');
 let btnregistro=document.getElementById("btnregistro");
-console.log(btnregistro);
+let btnregistro=document.getElementById("btnregistro");
+let UserType=document.getElementById("radiobtn");
+let formContratista=document.getElementById('formContratista');
+let formOperador=document.getElementById('formOperador');
+let formMaquina=document.getElementById('formMaquina');
+
+
+
+UserType.addEventListener("change",ChangeForm);
+function ChangeForm(){
+let radio=document.querySelector('input[name="UserType"]:checked').value;
+formContratista.setAttribute('hidden',"");
+formOperador.setAttribute('hidden',"");
+formMaquina.setAttribute('hidden',"");
+if(radio=='Operador'){
+    formOperador.removeAttribute('hidden');
+}
+if(radio=='Contratista'){
+    formContratista.removeAttribute('hidden');
+}
+if(radio=='Maquina'){ 
+    formMaquina.removeAttribute('hidden');
+}
+}
+
 form.addEventListener("change",campos);
 function campos(){
     let notValid = form.querySelectorAll(":invalid");
@@ -24,7 +47,6 @@ function campos(){
     });
 }
 
-
 btnregistro.addEventListener("click",function (event){
     let objeto = {
         name: document.getElementById("inputName").value,
@@ -39,9 +61,9 @@ btnregistro.addEventListener("click",function (event){
         id: document.getElementById("phone").value,
         company: "",
         user: document.getElementById("inputName").value,
-
     }
     registrarDatos(objeto);
+    event.preventDefault();
 });
 
 function registrarDatos(datos) {
