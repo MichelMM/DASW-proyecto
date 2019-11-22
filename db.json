@@ -4,7 +4,6 @@
     "name": "nombre1",
     "cellphone": "11111111",
     "email": "n1@gmail.com",
-    "adresses": {
       "personalAdd": {
         "city": "",
         "country": "",
@@ -14,8 +13,7 @@
         "city": "",
         "country": "",
         "CP": ""
-      }
-    },
+      },
     "payInfo": "9envonevonqoenvo2neiprvnoipenovi2eoiv",
     "billingInfo": "lvndwoncuqiodcnilqbevonqwnvoqndiovn"
   }],
