@@ -1,0 +1,42 @@
+{
+  "usuario": [
+    {
+      "name": "Michel",
+      "lastname": "Maris Mora",
+      "company": "ITESO",
+      "mail": "mmich91@iteso.mx",
+      "user": "Michel",
+      "password": "12345",
+      "cellphone": "3313519904",
+      "city": "Guadalajara",
+      "cp": "44540",
+      "rfc": "MAMM990209HJCRRC07",
+      "type": "contratista",
+      "id": 1
+    },
+    {
+      "name": "Miguel",
+      "lastname": "Maris Mora",
+      "company": "ITESO",
+      "mail": "mmich91@iteso.mx",
+      "user": "Michel",
+      "password": "12345",
+      "cellphone": "3313519904",
+      "city": "Guadalajara",
+      "cp": "44540",
+      "rfc": "MAMM990209HJCRRC07",
+      "type": "contratista",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

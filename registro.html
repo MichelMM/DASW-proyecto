@@ -20,30 +20,34 @@
                                         <h3 class="mb-0 my-2">Registro</h3>
                                     </div>
                                     <div class="card-body">
-                                        <form class="form" role="form" autocomplete="off">
+                                        <!-- <form class="form" role="form" autocomplete="off"> -->
                                             <div class="form-group">
                                                 <label for="inputName">Nombre</label>
-                                                <input type="text" class="form-control" id="inputName" placeholder="full name">
+                                                <input type="text" class="form-control" id="inputName" placeholder="Nombre" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputName">Apellido(s)</label>
+                                                <input type="text" class="form-control" id="inputApellido" placeholder="Apellido(s)" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputEmail3">Email</label>
-                                                <input type="email" class="form-control" id="inputEmail3" placeholder="email@gmail.com" required="">
+                                                <input type="email" class="form-control" id="inputEmail3" placeholder="email@gmail.com" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputPassword3">Contraseña</label>
-                                                <input type="password" class="form-control" id="inputPassword3" placeholder="password" title="At least 6 characters with letters and numbers" required="">
+                                                <input type="password" class="form-control" id="password1" placeholder="password" title="At least 6 characters with letters and numbers" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputVerify3">Verify</label>
-                                                <input type="password" class="form-control" id="inputVerify3" placeholder="password (again)" required="">
+                                                <input type="password" class="form-control" id="password2" placeholder="password (again)" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="inputTel">Teléfono</label>
-                                                <input type="text" class="form-control" id="Telefono" placeholder="10 dígitos">
+                                                <input type="tel" name="phone" class="form-control" id = "phone" pattern="[0-9]{10}" required placeholder="10 Dígitos">
                                             </div>
                                             <div class="form-group">
                                                 <label for="">Ciudad</label>
-                                                <select class="form-control" name="" id="">
+                                                <select class="form-control" name="" id="city" required>
                                                     <option>Guadalajara</option>
                                                     <option>Monterrey</option>
                                                     <option>CDMX</option>
@@ -51,26 +55,26 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="CP">Código Postal</label>
-                                                <input type="text" class="form-control" id="CP" placeholder="Código Postal">
+                                                <input type="text" pattern = "[0-9]{5}" class="form-control" id="CP" placeholder="Código Postal" required>
                                             </div>
                                             <div class="form-group">
                                                 <label for="RFC">RFC</label>
-                                                <input type="text" class="form-control" id="RFC" placeholder="RFC">
+                                                <input type="text" class="form-control" id="RFC" placeholder="RFC" required> 
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <label class="form-check-label">
-                                                    <input class="form-check-input" type="radio" name="tipo" id="tipo" value="checkedValue"> Operador
-                                                    <input class="form-check-input" type="radio" name="tipo" id="tipo" value="checkedValue"> Contratista
+                                                    <input class="form-check-input" type="radio" name="tipo" id="tipo1" value="checkedValue" required> Operador
+                                                    <input class="form-check-input" type="radio" name="tipo" id="tipo2" value="checkedValue" required> Contratista
                                                 </label>
                                             </div>
                                             
                                             
 
                                         
-                                            <div class="form-group">
-                                                <button type="submit" class="btn btn-success btn-lg float-right" style="background-color: rgb(154, 33, 32);">Registrarse</button>
+                                          <div class="form-group">
+                                                <button type="submit" id = "registro" class="btn btn-success btn-lg float-right" style="background-color: rgb(154, 33, 32);">Registrarse</button>
                                             </div>
-                                        </form>
+                                        <!-- </form> -->
                                     </div>
                                 </div>
                             </div>
@@ -84,6 +88,7 @@
             </div>
             <!--/container-->
     <!-- Optional JavaScript -->
+    <script src="./registro.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
