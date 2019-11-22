@@ -1,7 +1,6 @@
 let modal=document.getElementById('registro');
 let form=document.getElementById('form');
 let btnregistro=document.getElementById("btnregistro");
-let btnregistro=document.getElementById("btnregistro");
 let UserType=document.getElementById("radiobtn");
 let formContratista=document.getElementById('formContratista');
 let formOperador=document.getElementById('formOperador');
