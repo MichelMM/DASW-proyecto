@@ -59,7 +59,8 @@
   }],
   "Comentarios": [{
     "id": 1,
-    "comment": "perdí"
+    "comment": "perdí",
+    "rate": 4
   }],
   "Conversacion": [{
     "id": 1
