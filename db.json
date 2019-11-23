@@ -1,30 +1,28 @@
 {
-  "Contratista": [
-    {
-      "id": "3317195308",
-      "name": "Kevin",
-      "lastname": "Moreno",
-      "cellphone": "3317195308",
-      "mail": "B@gmail.com",
-      "personalAdd": {
-        "street": "Roberto Cuellar 4263",
-        "city": "Guadalajara",
-        "state": "Jalisco",
-        "CP": "45040"
-      },
-      "companyName": "2m",
-      "companyAdd": {
-        "street": "Roberto Cuellar 4263",
-        "city": "Guadalajara",
-        "state": "Jalisco",
-        "CP": "45040"
-      },
-      "payInfo": "jijijiji9898",
-      "rfc": "ITESO",
-      "user": "Kevin",
-      "password": "1"
-    }
-  ],
+  "Contratista": [{
+    "id": "3317195308",
+    "name": "Kevin",
+    "lastname": "Moreno",
+    "cellphone": "3317195308",
+    "mail": "B@gmail.com",
+    "personalAdd": {
+      "street": "Roberto Cuellar 4263",
+      "city": "Guadalajara",
+      "state": "Jalisco",
+      "CP": "45040"
+    },
+    "companyName": "2m",
+    "companyAdd": {
+      "street": "Roberto Cuellar 4263",
+      "city": "Guadalajara",
+      "state": "Jalisco",
+      "CP": "45040"
+    },
+    "payInfo": "jijijiji9898",
+    "rfc": "ITESO",
+    "user": "Kevin",
+    "password": "1"
+  }],
   "Operador": [{
     "id": 3345631034,
     "name": "Roberto",
@@ -38,8 +36,6 @@
     "operatorIMG": "https://randomuser.me/api/portraits/men/21.jpg",
     "previousJobs": [{
       "company": "Intel",
-      "timeWorked": "365 hrs",
-      "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
       "referenceContact": {
         "name": "Federico",
         "cellphone": "3344610335"
@@ -52,34 +48,33 @@
         "id": 2
       }
     ],
-    "certificate": {
-      "yearsExperience": "4",
-      "recommendationCard": [
-        {"recomendationCard": "https://www.letterwritingservice.net/wp-content/uploads/2018/06/reference-letter-for-green-card-eb2-example.png"},
-        {"recomendationCard":"https://qph.fs.quoracdn.net/main-qimg-87e9a7e2d0a93cb02c697ff57111dd6b"}
-      ]
-    },
+    "yearsExperience": "4",
+    "recommendationCard": [{
+        "recomendationCard": "https://www.letterwritingservice.net/wp-content/uploads/2018/06/reference-letter-for-green-card-eb2-example.png"
+      },
+      {
+        "recomendationCard": "https://qph.fs.quoracdn.net/main-qimg-87e9a7e2d0a93cb02c697ff57111dd6b"
+      }
+    ],
+    "timeWorked": "365 hrs",
+    "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
     "available": "Por hora"
   }],
   "Maquinaria": [
     {
       "id": 1,
       "type": "type1",
-      "brand": "brand1",
+      "dealer": "dealer1",
       "model":"model1",
       "specifications": "PDF"
     }
   ],
-  "Comentarios": [
-    {
-      "id": 1,
-      "comment": "perdí",
-      "rate": 4
-    }
-  ],
-  "Conversacion": [
-    {
-      "id": 1
-    }
-  ]
+  "Comentarios": [{
+    "id": 1,
+    "comment": "perdí",
+    "rate": 4
+  }],
+  "Conversacion": [{
+    "id": 1
+  }]
 }
