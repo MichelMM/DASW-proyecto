@@ -25,60 +25,49 @@
       "password": "1"
     }
   ],
-  "Operador": [
-    {
-      "id": 1,
-      "name": "typicode",
-      "licensePDF": "url1",
-      "officialID": "urlIMG_ID",
-      "noCRB": "urlIMG_CRB",
-      "operatorIMG": "img_OP",
-      "previousJobs": [
-        {
-          "company": "comName",
-          "timeWorked": "365 hrs",
-          "machinesOperated": [
-            {
-              "id": 1
-            },
-            {
-              "id": 2
-            },
-            {
-              "id": 3
-            },
-            {
-              "id": 4
-            }
-          ],
-          "recomendationCard": "urlCARD",
-          "referenceContact": "contact1"
-        }
-      ],
-      "machinesOperated": [
-        {
-          "id": 1
-        },
-        {
-          "id": 2
-        }
-      ],
-      "certificate": {
-        "yearsExperience": "365hrs",
-        "recommendationCard": "PDF",
-        "referenceContact": "PDF"
+  "Operador": [{
+    "id": 3345631034,
+    "name": "Roberto",
+    "lastname": "Zepeda Gonzalez",
+    "licensePDF": "https://www.oaklandcityid.com/uploads/4/2/1/9/4219226/new-oaklandid-site-mock-up_orig.png",
+    "officialID": "https://laopinionla.files.wordpress.com/2018/07/federal-non-compliant-large.jpg?quality=80&strip=all&w=940",
+    "city": "Guadalajara",
+    "state": "Jalisco",
+    "cellphone": "3345631034",
+    "noCRB": "https://www.evictionrecords.com/images/state-criminal-records/id-idaho-tenant-records.jpg",
+    "operatorIMG": "https://randomuser.me/api/portraits/men/21.jpg",
+    "previousJobs": [{
+      "company": "Intel",
+      "timeWorked": "365 hrs",
+      "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
+      "referenceContact": {
+        "name": "Federico",
+        "cellphone": "3344610335"
+      }
+    }],
+    "machinesOperated": [{
+        "id": 1
       },
-      "available": "perHour"
-    }
-  ],
+      {
+        "id": 2
+      }
+    ],
+    "certificate": {
+      "yearsExperience": "4",
+      "recommendationCard": [
+        {"recomendationCard": "https://www.letterwritingservice.net/wp-content/uploads/2018/06/reference-letter-for-green-card-eb2-example.png"},
+        {"recomendationCard":"https://qph.fs.quoracdn.net/main-qimg-87e9a7e2d0a93cb02c697ff57111dd6b"}
+      ]
+    },
+    "available": "Por hora"
+  }],
   "Maquinaria": [
     {
       "id": 1,
       "type": "type1",
-      "category": "cat1",
       "brand": "brand1",
-      "specifications": "PDF",
-      "timeUsed": "DateType"
+      "model":"model1",
+      "specifications": "PDF"
     }
   ],
   "Comentarios": [
