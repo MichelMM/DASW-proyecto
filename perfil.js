@@ -1,5 +1,4 @@
 let user = JSON.parse(localStorage.usuario);
-console.log(user);
 let camposOperador = document.getElementById("rowOperador");
 let camposContratista = document.getElementById("rowContratista");
 
@@ -34,50 +33,121 @@ let recomendation=document.getElementById('recomendation');
 let EditOperador=document.getElementById('EditOperador');
 let DeleteOperador=document.getElementById('DeleteOperador');
 
+let CoIMG=document.getElementById("ContratistaIMG");
+let CIMGurl=document.getElementById("img");
+let Name = document.getElementById("inputName");
+let Last = document.getElementById("inputApellido");
+let Mail = document.getElementById("inputEmail3");
+let Pstreet = document.getElementById("Pstreet");
+let Pcity = document.getElementById("Pcity");
+let PCP = document.getElementById("PCP");
+let Cname = document.getElementById("Cname");
+let Cstreet = document.getElementById("Cstreet");
+let Ccity = document.getElementById("Ccity");
+let CCP = document.getElementById("CCP");
+let cellphone = document.getElementById("phone");
+let Cpassword = document.getElementById('Cpassword1');
+let payInfo=document.getElementById('payInfo');
+let RFC=document.getElementById('RFC');
+let EditContratista=document.getElementById('EditContratista');
+let DeleteContratista=document.getElementById('DeleteContratista');
+
+
+function ObtenerDatosOperador() {
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', `http://localhost:3000/Operador?mail=${user[0].mail}`);
+  xhr.send([JSON.stringify(null)]);
+  xhr.onload = function () {
+      if (xhr.status != 200) {
+          alert(xhr.status + ': ' + xhr.statusText + '\n Error, correo o contraseña invalidos');
+      } else {
+          localStorage.setItem("usuario", xhr.response);
+          let Usuario=JSON.parse(xhr.response);
+          OprecargarDatos(Usuario[0]);
+      }
+  };
+}
+
+function ObtenerDatosContratista() {
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', `http://localhost:3000/Contratista?mail=${user[0].mail}`);
+  xhr.send([JSON.stringify(null)]);
+  xhr.onload = function () {
+      if (xhr.status != 200) {
+          alert(xhr.status + ': ' + xhr.statusText + '\n Error, correo o contraseña invalidos');
+      } else {
+          localStorage.setItem("usuario", xhr.response);
+          let Usuario=JSON.parse(xhr.response);
+          CprecargarDatos(Usuario[0]);
+          console.log(Usuario[0])
+      }
+  };
+}
 function ocultarCampos() {
     camposContratista.removeAttribute('hidden');
     camposOperador.removeAttribute('hidden');
     if (user[0].type == "operador") {
         camposContratista.setAttribute('hidden', "");
-        OprecargarDatos();
+        ObtenerDatosOperador();
     } else {
         camposOperador.setAttribute('hidden', "");
-        CprecargarDatos();
+        ObtenerDatosContratista();
     }
 }
+
 ocultarCampos();
 
-function OprecargarDatos() {
-    OdivIMG.innerHTML += ` <img  style="margin: 20px; height:180px; width:180px;"class="mx-auto d-block card-img-top rounded-circle"src="${user[0].operatorIMG}" alt="">`
-    OName.value = user[0].name;
-    OLast.value = user[0].lastname;
-    OMail.value = user[0].mail;
-    OlicensePDF.value = user[0].licensePDF;
-    OofficialID.value=user[0].officialID;
-    Ocity.value = user[0].city;
-    Ocellphone.value = user[0].cellphone;
-    OpIMG.value = user[0].operatorIMG;
-    noCRB.value = user[0].noCRB;
-    yearsExperience.value = user[0].yearsExperience;
-    OPavailable.value = user[0].available;
-    Orfc.value = user[0].rfc;
-    Opassword.value = user[0].password;
-    description.value = user[0].description;
-job1.value = user[0].previousJob1.company;
- jobc1.value = user[0].previousJob1.referenceContact.name;
- jobtel1.value = user[0].previousJob1.referenceContact.cellphone;
- job2.value = user[0].previousJob2.company;
- jobc2.value = user[0].previousJob2.referenceContact.name;
- jobtel2.value = user[0].previousJob2.referenceContact.cellphone;
-job3.value = user[0].previousJob3.company;
-jobc3.value = user[0].previousJob3.referenceContact.name;
-jobtel3.value = user[0].previousJob3.referenceContact.cellphone;
-recomendation.value=user[0].recomendation;
+function OprecargarDatos(User) {
+    OdivIMG.innerHTML += ` <img  style="margin: 20px; height:180px; width:180px;"class="mx-auto d-block card-img-top rounded-circle"src="${User.operatorIMG}" alt="">`
+    OName.value = User.name;
+    OLast.value = User.lastname;
+    OMail.value = User.mail;
+    OlicensePDF.value = User.licensePDF;
+    OofficialID.value=User.officialID;
+    Ocity.value = User.city;
+    Ocellphone.value = User.cellphone;
+    OpIMG.value = User.operatorIMG;
+    noCRB.value = User.noCRB;
+    yearsExperience.value = User.yearsExperience;
+    OPavailable.value = User.available;
+    Orfc.value = User.rfc;
+    Opassword.value = User.password;
+    description.value = User.description;
+job1.value = User.previousJob1.company;
+ jobc1.value = User.previousJob1.referenceContact.name;
+ jobtel1.value = User.previousJob1.referenceContact.cellphone;
+ job2.value = User.previousJob2.company;
+ jobc2.value = User.previousJob2.referenceContact.name;
+ jobtel2.value = User.previousJob2.referenceContact.cellphone;
+job3.value = User.previousJob3.company;
+jobc3.value = User.previousJob3.referenceContact.name;
+jobtel3.value = User.previousJob3.referenceContact.cellphone;
+recomendation.value=User.recomendation;
+}
+
+function CprecargarDatos(User) {
+  CoIMG.innerHTML += ` <img  style="margin: 20px; height:180px; width:180px;"class="mx-auto d-block card-img-top rounded-circle"src="${User.img}" alt="">`
+  CIMGurl.value=User.img;
+  Name.value=User.name;
+  Last.value=User.lastname;
+  Mail.value=User.mail;
+  Pstreet.value=User.personalAdd.street;
+  Pcity.value=User.personalAdd.city;
+  PCP.value=User.personalAdd.CP;
+  Cstreet.value=User.companyAdd.street;
+  Cname.value=User.companyName;
+  Ccity.value=User.companyAdd.city;
+  CCP.value=User.companyAdd.CP;
+  cellphone.value=User.cellphone;
+  Cpassword.value=User.password;
+  payInfo.value=User.payInfo;
+  RFC.value=User.rfc
 }
 
 EditOperador.addEventListener('click', function () {
     let DatosOperador = {
     name:OName.value,
+      id:user[0].id,
       lastname:OLast.value,
       mail:OMail.value,
       licensePDF: OlicensePDF.value,
@@ -126,12 +196,11 @@ EditOperador.addEventListener('click', function () {
 });
 
 function OperadorUpdate(Datos) {
-  console.log( `http://localhost:3000/Operador?mail=${user[0].mail}`);
     event.preventDefault();
     // 1. Crear XMLHttpRequest object
     let xhr = new XMLHttpRequest();
     // 2. Configurar: PUT actualizar archivo
-    xhr.open('PATCH', `http://localhost:3000/Operador?mail=${user[0].mail}`);
+    xhr.open('PUT',`http://localhost:3000/Operador/${Datos.id}`);
     // 3. indicar tipo de datos JSON
     xhr.setRequestHeader('Content-Type', 'application/json');
     // 4. Enviar solicitud a la red
@@ -147,20 +216,105 @@ function OperadorUpdate(Datos) {
     };
 };
 
+DeleteOperador.addEventListener('click',function (){
+  // 1. Crear XMLHttpRequest object
+  let xhr = new XMLHttpRequest();
+  // 2. Configurar: PUT actualizar archivo
+  xhr.open('DELETE', `http://localhost:3000/Operador/${user[0].id}`);
+  // 3. indicar tipo de datos JSON
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.setRequestHeader('x-auth', localStorage.token);
+  xhr.setRequestHeader('x-user-token', localStorage.userToken);
+  // 4. Enviar solicitud a la red
+  xhr.send(null);
+  // 5. Una vez recibida la respuesta del servidor
+  xhr.onload = function () {
+      if (xhr.status != 200) { // analizar el estatus de la respuesta HTTP
+          // Ocurrió un error
+          alert("ERROR");
+          alert(xhr.status + ': ' + xhr.statusText); // e.g. 404: Not Found
+      } else {
+          // Significa que fue exitoso
+          
+          window.location.href = "/home.html";
+          alert("Usuario Eliminado");
+      }
+  };
 
+});
 
-function OEditValues(){
-
+EditContratista.addEventListener('click',function(){
+let DatosContratista={
+  id:user[0].id,
+  name: Name.value,
+  lastname: Last.value,
+  cellphone: cellphone.value,
+  mail: Mail.value,
+  personalAdd: {
+    street: Pstreet.value,
+    city: Pcity.value,
+    state: (Pcity.value == "Guadalajara") ? "Jalisco" : (document.getElementById("city").value == "Monterrey") ? "Nuevo Leon" : "Ciudad de México",
+    CP:  PCP.value
+  },
+  companyName: Cname.value,
+  companyAdd: {
+    street: Cstreet.value,
+    city: Ccity.value,
+    state: (Ccity.value == "Guadalajara") ? "Jalisco" : (document.getElementById("city").value == "Monterrey") ? "Nuevo Leon" : "Ciudad de México",
+    CP:  CCP.value
+  },
+  payInfo:  payInfo.value,
+  rfc: RFC.value,
+  user: Name.value,
+  password: Cpassword.value,
+  type: "contratista",
+  img: CIMGurl.value
 }
+ContratistaUpdate(DatosContratista);
+});
 
-function CprecargarDatos() {
-    CdivIMG.innerHTML += ` <img  style="margin: 20px; height:180px; width:180px;"class="mx-auto d-block card-img-top rounded-circle"src="${user[0].img}" alt="">`
-}
+function ContratistaUpdate(Datos) {
+  event.preventDefault();
+  // 1. Crear XMLHttpRequest object
+  let xhr = new XMLHttpRequest();
+  // 2. Configurar: PUT actualizar archivo
+  xhr.open('PUT',`http://localhost:3000/Contratista/${Datos.id}`);
+  // 3. indicar tipo de datos JSON
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  // 4. Enviar solicitud a la red
+  xhr.send(JSON.stringify(Datos));
+  // 5. Una vez recibida la respuesta del servidor
+  xhr.onload = function () {
+      if (xhr.status != 200) { // analizar el estatus de la respuesta HTTP
+          // Ocurrió un error
+          alert(xhr.status + ':' + xhr.statusText); // e.g. 404: Not Found
+      } else {
+          alert(' El Contratista ha sido actualizado con éxito');
+      }
+  };
+};
 
-// function userEdit(correo) {
+DeleteContratista.addEventListener('click',function (){
+  // 1. Crear XMLHttpRequest object
+  let xhr = new XMLHttpRequest();
+  // 2. Configurar: PUT actualizar archivo
+  xhr.open('DELETE', `http://localhost:3000/Contratista/${user[0].id}`);
+  // 3. indicar tipo de datos JSON
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  // 4. Enviar solicitud a la red
+  xhr.send(null);
+  // 5. Una vez recibida la respuesta del servidor
+  xhr.onload = function () {
+      if (xhr.status != 200) { // analizar el estatus de la respuesta HTTP
+          // Ocurrió un error
+          alert("ERROR");
+          alert(xhr.status + ': ' + xhr.statusText); // e.g. 404: Not Found
+      } else {
+          // Significa que fue exitoso
+          
+          window.location.href="/home.html";
+          alert("Usuario Eliminado");
+      }
+  };
 
-// };
-
-// function userUpdate(DatosUsuario) {
-
-// };
+});

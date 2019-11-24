@@ -1,32 +1,5 @@
 {
-  "Contratista": [
-    {
-      "id": "3317195308",
-      "name": "Kevin",
-      "lastname": "Moreno",
-      "cellphone": "3317195308",
-      "mail": "B@gmail.com",
-      "personalAdd": {
-        "street": "Roberto Cuellar 4263",
-        "city": "Guadalajara",
-        "state": "Jalisco",
-        "CP": "45040"
-      },
-      "companyName": "2m",
-      "companyAdd": {
-        "street": "Roberto Cuellar 4263",
-        "city": "Guadalajara",
-        "state": "Jalisco",
-        "CP": "45040"
-      },
-      "payInfo": "jijijiji9898",
-      "rfc": "ITESO",
-      "user": "Kevin",
-      "password": "1",
-      "type": "contratista",
-      "img": "data:image/png;base64,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"
-    }
-  ],
+  "Contratista": [],
   "Operador": [
     {
       "id": 3345631034,
@@ -116,21 +89,21 @@
       "description": ""
     },
     {
-      "id": "1452369685",
-      "name": "Andrea",
-      "lastname": "Gonzalez",
-      "mail": "ag@gmail.com",
+      "name": "juano",
+      "id": "3317195376",
+      "lastname": "galvez",
+      "mail": "juana@gmail.com",
       "licensePDF": "http://jornadasciberseguridad.riasc.unileon.es/archivos/ejemplo_esp.pdf",
       "officialID": "https://media.nbcphiladelphia.com/images/1941*1092/pennsylvania+real+id+03012019.jpg",
       "city": "Guadalajara",
       "state": "Jalisco",
-      "cellphone": "1452369685",
-      "operatorIMG": "https://randomuser.me/api/portraits/women/22.jpg",
+      "cellphone": "3317195376",
+      "operatorIMG": "https://randomuser.me/api/portraits/men/1.jpg",
       "noCRB": "https://si.ua.es/es/documentos/documentacion/pdf-s/mozilla12-pdf.pdf",
-      "yearsExperience": "4",
-      "available": "Por semana",
-      "rfc": "345eeejn",
-      "user": "Andrea",
+      "yearsExperience": "8",
+      "available": "Por hora",
+      "rfc": "jiu",
+      "user": "juano",
       "password": "1",
       "type": "operador",
       "previousJob1": {
@@ -154,9 +127,15 @@
           "cellphone": ""
         }
       },
-      "machinesOperated": [],
-      "recomendationCard": "",
-      "description": ""
+      "machinesOperated": [
+        "1",
+        "3",
+        "3",
+        "",
+        ""
+      ],
+      "recomendationCard": "undefined",
+      "description": "que rollo con el pollo"
     }
   ],
   "Maquinaria": [
@@ -167,11 +146,7 @@
       "dealer": "Caterpillar CS431C",
       "model": "m3054T",
       "specifications": "http://maquqam.com/tecnicas/carreteras-3337/caterpillar/cs431c.html",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti.",
-      "hourCost": "750",
-      "dayCost": "300",
-      "weekCost": "3500",
-      "transport": "SI"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti."
     },
     {
       "id": 2,
@@ -180,11 +155,7 @@
       "dealer": "Kobelco SK30SR-5",
       "model": "3TNV88",
       "specifications": "http://maquqam.com/tecnicas/construccion-6259/kobelco/sk30sr-5.html",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti.",
-      "hourCost": "50",
-      "dayCost": "700",
-      "weekCost": "1100",
-      "transport": "SI"
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti."
     },
     {
       "id": "3",
@@ -193,37 +164,7 @@
       "model": "6068T",
       "specifications": "http://maquqam.com/tecnicas/construccion-4768/john-deere/790e-lc.html",
       "description": "EXC-20 2004 EXCAVADORA HIDRAULICA SOBRE ORUGAS, MARCA JOHN DEERE, MODELO 200CLC, SERIE FF200CX505XXX, CUCHARON PARA ROCA 0.86 M3, BRAZO STD DE 10 ft (3.00 mt), SISTEMA AUXILIAR HIDRAULICO, CABINA, MOTOR JOHN DEERE 141 HP, 105.1 KW, 6 CIL. DIESEL, PESO OPER 20.9 TON 11, 792 HRS",
-      "img": "http://amsconstructionparts.com/machines/excavator/john-deere/790e-lc.jpg",
-      "hourCost": "250",
-      "dayCost": "700",
-      "weekCost": "3200",
-      "transport": "SI"
-    },
-    {
-      "id": "7",
-      "type": "Carretillas elevadoras horquillas",
-      "dealer": "G.M.",
-      "model": "GM 4.3L",
-      "specifications": "http://maquqam.com/tecnicas/elevacion-9109/hyster/h90ft-dm2-lp.html",
-      "description": "1. Longitud hasta las horquillas del elevador\t2997 mm 2. Anchura Total\t1402 mm 3. Altura de gálibo con mástiles bajados\t2171 mm 4. Eje de ruedas\t1830 mm 5. Despeje sobre el suelo\t194 mm 6. Altura hasta la parte superior de la cubierta protectora\t2258 mm 7. Altura máxima de la horquilla del elevador\t3050 mm",
-      "img": "data:image/jpeg;base64,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",
-      "hourCost": "150",
-      "dayCost": "1700",
-      "weekCost": "20300",
-      "transport": "SI"
-    },
-    {
-      "id": "11",
-      "type": "Excavadora hidráulica",
-      "dealer": "Volvo",
-      "model": "D6D EBE2",
-      "specifications": "http://maquqam.com/tecnicas/construccion-4768/volvo/ec160blc.html",
-      "description": "1. Longitud para el transporte\t8780 mm 3. Altura para el transporte\t2980 mm 9. Altura máxima de corte\t8530 mm 10. Altura máxima de carga\t6110 mm 11. Alcance máximo a lo largo del nivel del suelo\t8490 mm 12. Profundidad máxima de excavación de una pared vertical\t4070 mm 13. Profundidad máxima de excavación\t5740 mm 1. Longitud para el transporte\t8670 mm 3. Altura para el transporte\t2990 mm 9. Altura máxima de corte\t8790 mm 10. Altura máxima de carga\t6340 mm 11. Alcance máximo a lo largo del nivel del suelo\t8810 mm 12. Profundidad máxima de excavación de una pared vertical\t4540 mm 13. Profundidad máxima de excavación\t6040 mm 1. Longitud para el transporte\t8710 mm 3. Altura para el transporte\t3020 mm 9. Altura máxima de corte\t9000 mm 10. Altura máxima de carga\t6540 mm 11. Alcance máximo a lo largo del nivel del suelo\t9180 mm 12. Profundidad máxima de excavación de una pared vertical\t4960 mm 13. Profundidad máxima de excavación\t6440 mm",
-      "img": "https://www.ecured.cu/images/thumb/4/47/Excav.1.2.jpg/260px-Excav.1.2.jpg",
-      "hourCost": "700",
-      "dayCost": "6000",
-      "weekCost": "23000",
-      "transport": "NO"
+      "img": "http://amsconstructionparts.com/machines/excavator/john-deere/790e-lc.jpg"
     }
   ],
   "Comentarios": [
