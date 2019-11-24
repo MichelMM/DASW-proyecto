@@ -60,10 +60,10 @@
 
                             <td align="left" width="50%">
                                 <ul class="list-group">
-                                    <li class="list-group-item"> <b>Nombre:</b> Operador Generico</li>
-                                    <li class="list-group-item"> <b>Busca trabajo:</b> Temporal</li>
-                                    <li class="list-group-item"><b>Estado:</b> Jalisco</li>
-                                    <li class="list-group-item"><b>Ciudad:</b> Guadalajara</li>
+                                    <li class="list-group-item"><b id = "name">Nombre: </b> </li>
+                                    <li class="list-group-item"> <b id = "work">Disponibilidad: </b></li>
+                                    <li class="list-group-item"><b id = "state">Estado: </b></li>
+                                    <li class="list-group-item"><b id="city">Ciudad: </b></li>
                                 </ul>
                             </td>
                             <td></td>
@@ -75,22 +75,10 @@
                         <tr>
                             <td>
                                 <ul class="list-group">
-                                    <li class="list-group-item"> <b>Descripción Personal:</b> Lorem ipsum dolor sit amet
-                                        consectetur,
-                                        adipisicing elit. Neque sit tenetur architecto
-                                        ipsum repellat, ipsa dolorem quibusdam rerum? Nihil, aspernatur placeat. Magni
-                                        soluta ex
-                                        quas itaque perspiciatis facilis. Pariatur, delectus!Perferendis alias cum
-                                        accusamus
-                                        quasi? Hic, explicabo! Error ipsam dolorem veritatis exercitationem. Fuga sed in
-                                        eveniet
-                                        quasi ipsam nulla maxime cumque laboriosam, at ullam. Necessitatibus iste iusto
-                                        repellendus amet sit.</li>
-                                    <li class="list-group-item"> <b>Empresa(s):</b>Empresa generica 1, empresa generica
-                                        2</li>
-                                    <li class="list-group-item"> <b>Tiempo de servicio: </b> 4 años</li>
-                                    <li class="list-group-item"> <b>Licencia(s):</b> Licencia n1 en loremene, Licencia
-                                        n2 en loremm</li>
+                                    <li class="list-group-item"> <b id ="desc">Descripción Personal: </b></li>
+                                    <li class="list-group-item"> <b id = "company">Empresa(s): </b></li>
+                                    <li class="list-group-item"> <b id = "time">Tiempo de servicio: </b></li>
+                                    <li class="list-group-item"> <b >Licencia: </b> <a id = "licence"href="">Licencia</a></li>
                             </td>
                             <td width="20%">
 
@@ -104,17 +92,8 @@
                 <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
                     <table width=100%>
                         <tr>
-                            <td>
-                                <li class="list-group-item"> <b>Maquinaria Manejada</b></li>
-                                <li class="list-group-item"> <b>Maquina 1:</b> Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Laudantium quas aut praesentium at delectus aliquid eaque qui
-                                    libero
-                                    maxime, nemo minima molestiae velit harum sapiente, nobis officia assumenda in
-                                    dignissimos.</li>
-                                <li class="list-group-item"> <b>Maquina 2:</b> Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Odio error incidunt quis commodi possimus autem omnis illo eaque
-                                    iste
-                                    ut exercitationem totam debitis nostrum, minus fugiat aut ipsam nemo excepturi?</li>
+                            <td id = "machine">
+                                <li class="list-group-item" > <b>Maquinaria Manejada</b></li>
                             </td>
                             <td width="20%">
 
@@ -171,6 +150,7 @@
         <hr style="background-color: white;">
     </div>
     <!-- Optional JavaScript -->
+    <script src="./candidato.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
