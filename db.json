@@ -22,7 +22,9 @@
       "payInfo": "jijijiji9898",
       "rfc": "ITESO",
       "user": "Kevin",
-      "password": "1"
+      "password": "1",
+      "type": "contratista",
+      "img": "shorturl.at/iANU5"
     }
   ],
   "Operador": [
@@ -37,15 +39,27 @@
       "cellphone": "3345631034",
       "noCRB": "https://www.evictionrecords.com/images/state-criminal-records/id-idaho-tenant-records.jpg",
       "operatorIMG": "https://randomuser.me/api/portraits/men/21.jpg",
-      "previousJobs": [
-        {
-          "company": "Intel",
-          "referenceContact": {
-            "name": "Federico",
-            "cellphone": "3344610335"
-          }
+      "previousJob1": {
+        "company": "Intel",
+        "referenceContact": {
+          "name": "Federico",
+          "cellphone": "3344610335"
         }
-      ],
+      },
+      "previousJob2": {
+        "company": "Intel",
+        "referenceContact": {
+          "name": "Federico",
+          "cellphone": "3344610335"
+        }
+      },
+      "previousJob3": {
+        "company": "Intel",
+        "referenceContact": {
+          "name": "Federico",
+          "cellphone": "3344610335"
+        }
+      },
       "machinesOperated": [
         {
           "id": 1
@@ -64,8 +78,30 @@
         }
       ],
       "timeWorked": "365 hrs",
+      "type": "operador",
       "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
-      "available": "Por hora"
+      "available": "Por hora",
+      "img": "https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
+    },
+    {
+      "id": "8883388888",
+      "name": "Julio",
+      "lastname": "BABA",
+      "mail": "julio@gmail.com",
+      "licensePDF": "http://jornadasciberseguridad.riasc.unileon.es/archivos/ejemplo_esp.pdf",
+      "officialID": "https://media.nbcphiladelphia.com/images/1941*1092/pennsylvania+real+id+03012019.jpg",
+      "city": "Guadalajara",
+      "state": "Jalisco",
+      "cellphone": "8883388888",
+      "operatorIMG": "https://randomuser.me/api/portraits/women/92.jpg",
+      "noCRB": "https://si.ua.es/es/documentos/documentacion/pdf-s/mozilla12-pdf.pdf",
+      "yearsExperience": "2",
+      "available": "Por hora",
+      "rfc": "345678ikjn",
+      "user": "Julio",
+      "password": "1",
+      "img": "https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1",
+      "type": "operador"
     }
   ],
   "Maquinaria": [

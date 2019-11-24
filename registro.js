@@ -86,7 +86,9 @@ BtnRegContratista.addEventListener("click", function (event) {
         payInfo: document.getElementById("payInfo").value,
         rfc: document.getElementById("RFC").value,
         user: document.getElementById("inputName").value,
-        password: document.getElementById('password1').value
+        password: document.getElementById('password1').value,
+        type:"contratista",
+        img:"shorturl.at/iANU5"
     }
     registrarContratista(objeto);
     event.preventDefault();
@@ -110,7 +112,9 @@ BtnRegOperador.addEventListener("click", function (event) {
         available:document.getElementById("OPavailable").value,
         rfc: document.getElementById("OPRFC").value,
         user: document.getElementById("OPinputName").value,
-        password: document.getElementById('OPpassword1').value
+        password: document.getElementById('OPpassword1').value,
+        img:"https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1",
+        type:"operador"
     }
     registrarOperador(objeto);
     event.preventDefault();
