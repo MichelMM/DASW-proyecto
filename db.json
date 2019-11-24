@@ -114,9 +114,48 @@
       "machinesOperated": [],
       "recomendationCard": "",
       "description": ""
-    },
-    {
-      "id": "Pc0imZe"
+    },{
+      "id": "1452369685",
+      "name": "Andrea",
+      "lastname": "Gonzalez",
+      "mail": "ag@gmail.com",
+      "licensePDF": "http://jornadasciberseguridad.riasc.unileon.es/archivos/ejemplo_esp.pdf",
+      "officialID": "https://media.nbcphiladelphia.com/images/1941*1092/pennsylvania+real+id+03012019.jpg",
+      "city": "Guadalajara",
+      "state": "Jalisco",
+      "cellphone": "1452369685",
+      "operatorIMG": "https://randomuser.me/api/portraits/women/22.jpg",
+      "noCRB": "https://si.ua.es/es/documentos/documentacion/pdf-s/mozilla12-pdf.pdf",
+      "yearsExperience": "4",
+      "available": "Por semana",
+      "rfc": "345eeejn",
+      "user": "Andrea",
+      "password": "1",
+      "type": "operador",
+      "previousJob1": {
+        "company": "",
+        "referenceContact": {
+          "name": "",
+          "cellphone": ""
+        }
+      },
+      "previousJob2": {
+        "company": "",
+        "referenceContact": {
+          "name": "",
+          "cellphone": ""
+        }
+      },
+      "previousJob3": {
+        "company": "",
+        "referenceContact": {
+          "name": "",
+          "cellphone": ""
+        }
+      },
+      "machinesOperated": [],
+      "recomendationCard": "",
+      "description": ""
     }
   ],
   "Maquinaria": [
