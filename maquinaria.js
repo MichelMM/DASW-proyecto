@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let operadores = JSON.parse(localStorage.getItem("operadorM"));
         let array = [];
         for (let operador in operadores) {
-            console.log(operadores[operador]);
+            // console.log(operadores[operador]);
            
             let HTMLOperador = `<tr>
 <td rowspan="5"><img width="200px"
