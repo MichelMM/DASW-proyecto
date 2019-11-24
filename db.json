@@ -56,18 +56,11 @@
       "previousJob3": {
         "company": "Intel",
         "referenceContact": {
-          "name": "Federico",
+          "name": "Federic",
           "cellphone": "3344610335"
         }
       },
-      "machinesOperated": [
-        {
-          "id": 1
-        },
-        {
-          "id": 2
-        }
-      ],
+      "machinesOperated": [1,2],
       "yearsExperience": "4",
       "recomendationCard": "https://www.letterwritingservice.net/wp-content/uploads/2018/06/reference-letter-for-green-card-eb2-example.png",
       "type": "operador",
