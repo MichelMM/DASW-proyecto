@@ -63,11 +63,23 @@
   "Maquinaria": [
     {
       "id": 1,
-      "type": "type1",
-      "dealer": "dealer1",
-      "model":"model1",
-      "specifications": "PDF"
+      "img":"http://s7d2.scene7.com/is/image/Caterpillar/CM20180925-52478-35901?$cc-s$",
+      "type": "Técnica de carreteras",
+      "dealer": "Caterpillar CS431C",
+      "model":"m3054T",
+      "specifications": "http://maquqam.com/tecnicas/carreteras-3337/caterpillar/cs431c.html",
+      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti."
+    },
+    {
+      "id": 2,
+      "img":"https://media.sandhills.com/img.axd?id=4291015129&wid=4326185391&rwl=False&p=&ext=&w=1200&h=630&t=&lp=MAT&c=True&wt=False&sz=Max&rt=0&checksum=1tMzQIU5j4fwEGO2wn9ht1Su7wAJC8s17RvSCiDz4Ds%3D",
+      "type": "Mini excavador ",
+      "dealer": "Kobelco SK30SR-5",
+      "model":"3TNV88",
+      "specifications": "http://maquqam.com/tecnicas/construccion-6259/kobelco/sk30sr-5.html",
+      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti."
     }
+
   ],
   "Comentarios": [{
     "id": 1,
