@@ -1,92 +1,112 @@
 {
-  "Contratista": [{
-    "id": "3317195308",
-    "name": "Kevin",
-    "lastname": "Moreno",
-    "cellphone": "3317195308",
-    "mail": "B@gmail.com",
-    "personalAdd": {
-      "street": "Roberto Cuellar 4263",
+  "Contratista": [
+    {
+      "id": "3317195308",
+      "name": "Kevin",
+      "lastname": "Moreno",
+      "cellphone": "3317195308",
+      "mail": "B@gmail.com",
+      "personalAdd": {
+        "street": "Roberto Cuellar 4263",
+        "city": "Guadalajara",
+        "state": "Jalisco",
+        "CP": "45040"
+      },
+      "companyName": "2m",
+      "companyAdd": {
+        "street": "Roberto Cuellar 4263",
+        "city": "Guadalajara",
+        "state": "Jalisco",
+        "CP": "45040"
+      },
+      "payInfo": "jijijiji9898",
+      "rfc": "ITESO",
+      "user": "Kevin",
+      "password": "1"
+    }
+  ],
+  "Operador": [
+    {
+      "id": 3345631034,
+      "name": "Roberto",
+      "lastname": "Zepeda Gonzalez",
+      "licensePDF": "https://www.oaklandcityid.com/uploads/4/2/1/9/4219226/new-oaklandid-site-mock-up_orig.png",
+      "officialID": "https://laopinionla.files.wordpress.com/2018/07/federal-non-compliant-large.jpg?quality=80&strip=all&w=940",
       "city": "Guadalajara",
       "state": "Jalisco",
-      "CP": "45040"
-    },
-    "companyName": "2m",
-    "companyAdd": {
-      "street": "Roberto Cuellar 4263",
-      "city": "Guadalajara",
-      "state": "Jalisco",
-      "CP": "45040"
-    },
-    "payInfo": "jijijiji9898",
-    "rfc": "ITESO",
-    "user": "Kevin",
-    "password": "1"
-  }],
-  "Operador": [{
-    "id": 3345631034,
-    "name": "Roberto",
-    "lastname": "Zepeda Gonzalez",
-    "licensePDF": "https://www.oaklandcityid.com/uploads/4/2/1/9/4219226/new-oaklandid-site-mock-up_orig.png",
-    "officialID": "https://laopinionla.files.wordpress.com/2018/07/federal-non-compliant-large.jpg?quality=80&strip=all&w=940",
-    "city": "Guadalajara",
-    "state": "Jalisco",
-    "cellphone": "3345631034",
-    "noCRB": "https://www.evictionrecords.com/images/state-criminal-records/id-idaho-tenant-records.jpg",
-    "operatorIMG": "https://randomuser.me/api/portraits/men/21.jpg",
-    "previousJobs": [{
-      "company": "Intel",
-      "referenceContact": {
-        "name": "Federico",
-        "cellphone": "3344610335"
-      }
-    }],
-    "machinesOperated": [{
-        "id": 1
-      },
-      {
-        "id": 2
-      }
-    ],
-    "yearsExperience": "4",
-    "recommendationCard": [{
-        "recomendationCard": "https://www.letterwritingservice.net/wp-content/uploads/2018/06/reference-letter-for-green-card-eb2-example.png"
-      },
-      {
-        "recomendationCard": "https://qph.fs.quoracdn.net/main-qimg-87e9a7e2d0a93cb02c697ff57111dd6b"
-      }
-    ],
-    "timeWorked": "365 hrs",
-    "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
-    "available": "Por hora"
-  }],
+      "cellphone": "3345631034",
+      "noCRB": "https://www.evictionrecords.com/images/state-criminal-records/id-idaho-tenant-records.jpg",
+      "operatorIMG": "https://randomuser.me/api/portraits/men/21.jpg",
+      "previousJobs": [
+        {
+          "company": "Intel",
+          "referenceContact": {
+            "name": "Federico",
+            "cellphone": "3344610335"
+          }
+        }
+      ],
+      "machinesOperated": [
+        {
+          "id": 1
+        },
+        {
+          "id": 2
+        }
+      ],
+      "yearsExperience": "4",
+      "recommendationCard": [
+        {
+          "recomendationCard": "https://www.letterwritingservice.net/wp-content/uploads/2018/06/reference-letter-for-green-card-eb2-example.png"
+        },
+        {
+          "recomendationCard": "https://qph.fs.quoracdn.net/main-qimg-87e9a7e2d0a93cb02c697ff57111dd6b"
+        }
+      ],
+      "timeWorked": "365 hrs",
+      "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
+      "available": "Por hora"
+    }
+  ],
   "Maquinaria": [
     {
       "id": 1,
-      "img":"http://s7d2.scene7.com/is/image/Caterpillar/CM20180925-52478-35901?$cc-s$",
+      "img": "http://s7d2.scene7.com/is/image/Caterpillar/CM20180925-52478-35901?$cc-s$",
       "type": "Técnica de carreteras",
       "dealer": "Caterpillar CS431C",
-      "model":"m3054T",
+      "model": "m3054T",
       "specifications": "http://maquqam.com/tecnicas/carreteras-3337/caterpillar/cs431c.html",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti."
     },
     {
       "id": 2,
-      "img":"https://media.sandhills.com/img.axd?id=4291015129&wid=4326185391&rwl=False&p=&ext=&w=1200&h=630&t=&lp=MAT&c=True&wt=False&sz=Max&rt=0&checksum=1tMzQIU5j4fwEGO2wn9ht1Su7wAJC8s17RvSCiDz4Ds%3D",
-      "type": "Mini excavador ",
+      "img": "https://media.sandhills.com/img.axd?id=4291015129&wid=4326185391&rwl=False&p=&ext=&w=1200&h=630&t=&lp=MAT&c=True&wt=False&sz=Max&rt=0&checksum=1tMzQIU5j4fwEGO2wn9ht1Su7wAJC8s17RvSCiDz4Ds%3D",
+      "type": "Mini excavador",
       "dealer": "Kobelco SK30SR-5",
-      "model":"3TNV88",
+      "model": "3TNV88",
       "specifications": "http://maquqam.com/tecnicas/construccion-6259/kobelco/sk30sr-5.html",
-      "description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti."
+    },
+    {
+      "id": "3",
+      "type": "Maquinaria de construcción",
+      "dealer": "John Deere",
+      "model": "6068T",
+      "specifications": "http://maquqam.com/tecnicas/construccion-4768/john-deere/790e-lc.html",
+      "description": "EXC-20 2004 EXCAVADORA HIDRAULICA SOBRE ORUGAS, MARCA JOHN DEERE, MODELO 200CLC, SERIE FF200CX505XXX, CUCHARON PARA ROCA 0.86 M3, BRAZO STD DE 10 ft (3.00 mt), SISTEMA AUXILIAR HIDRAULICO, CABINA, MOTOR JOHN DEERE 141 HP, 105.1 KW, 6 CIL. DIESEL, PESO OPER 20.9 TON 11, 792 HRS",
+      "img": "http://amsconstructionparts.com/machines/excavator/john-deere/790e-lc.jpg"
     }
-
   ],
-  "Comentarios": [{
-    "id": 1,
-    "comment": "perdí",
-    "rate": 4
-  }],
-  "Conversacion": [{
-    "id": 1
-  }]
+  "Comentarios": [
+    {
+      "id": 1,
+      "comment": "perdí",
+      "rate": 4
+    }
+  ],
+  "Conversacion": [
+    {
+      "id": 1
+    }
+  ]
 }
