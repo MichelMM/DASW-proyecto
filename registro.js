@@ -113,8 +113,31 @@ BtnRegOperador.addEventListener("click", function (event) {
         rfc: document.getElementById("OPRFC").value,
         user: document.getElementById("OPinputName").value,
         password: document.getElementById('OPpassword1').value,
-        img:"https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1",
-        type:"operador"
+        type:"operador",
+        previousJob1: {
+            company: "",
+            referenceContact: {
+              name: "",
+              cellphone: ""
+            }
+          },
+        previousJob2: {
+            company: "",
+            referenceContact: {
+              name: "",
+              cellphone: ""
+            }
+          },
+        previousJob3: {
+            company: "",
+            referenceContact: {
+              name: "",
+              cellphone: ""
+            }
+          },
+        machinesOperated:[],
+        recomendationCard:"",
+        description:""
     }
     registrarOperador(objeto);
     event.preventDefault();
