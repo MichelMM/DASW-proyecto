@@ -69,21 +69,12 @@
         }
       ],
       "yearsExperience": "4",
-      "recommendationCard": [
-        {
-          "recomendationCard": "https://www.letterwritingservice.net/wp-content/uploads/2018/06/reference-letter-for-green-card-eb2-example.png"
-        },
-        {
-          "recomendationCard": "https://qph.fs.quoracdn.net/main-qimg-87e9a7e2d0a93cb02c697ff57111dd6b"
-        }
-      ],
-      "timeWorked": "365 hrs",
+      "recomendationCard": "https://www.letterwritingservice.net/wp-content/uploads/2018/06/reference-letter-for-green-card-eb2-example.png",
       "type": "operador",
       "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
       "available": "Por hora",
-      "description":"soy honesto",
-      "img": "https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
-    },
+      "description":"soy honesto"
+      },
     {
       "id": "8883388888",
       "name": "Julio",
