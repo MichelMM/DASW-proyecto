@@ -71,7 +71,7 @@
       "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
       "available": "Por hora",
       "description": "soy honesto",
-      "status":"active"
+      "status": "inactivo"
     },
     {
       "id": "3378195308",
@@ -115,7 +115,7 @@
       "machinesOperated": [],
       "recomendationCard": "",
       "description": "",
-      "status":"active"
+      "status": "active"
     }
   ],
   "Maquinaria": [
