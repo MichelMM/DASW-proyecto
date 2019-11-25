@@ -195,7 +195,7 @@ img{ max-width:100%;}
                                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="chat_ib">
                                   <h5>Operador 1</h5>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus culpa hic dolorem </p>
+                                  <p id="latestMessage">Perfecto! Cuanto tiempo va a requerir el trabajo?</p>
                                 </div>
                               </div>
                             </div>
@@ -204,7 +204,7 @@ img{ max-width:100%;}
                                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="chat_ib">
                                   <h5>Operador 2 </h5>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus culpa hic dolorem</p>
+                                  <p>Que tal</p>
                                 </div>
                               </div>
                             </div>
@@ -213,7 +213,7 @@ img{ max-width:100%;}
                                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="chat_ib">
                                   <h5>Operador 3 </h5>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus culpa hic dolorem</p>
+                                  <p>Hola! Que tal?</p>
                                 </div>
                               </div>
                             </div>
@@ -222,7 +222,7 @@ img{ max-width:100%;}
                                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="chat_ib">
                                   <h5>Operador 4 </h5>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus culpa hic dolorem</p>
+                                  <p>Por qué? no has llegado a un acuerdo?</p>
                                 </div>
                               </div>
                             </div>
@@ -231,7 +231,7 @@ img{ max-width:100%;}
                                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="chat_ib">
                                   <h5>Operador 5 </h5>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus culpa hic dolorem</p>
+                                  <p>Y sobre el contrato...</p>
                                 </div>
                               </div>
                             </div>
@@ -240,7 +240,7 @@ img{ max-width:100%;}
                                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="chat_ib">
                                   <h5>Operador 6 </h5>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus culpa hic dolorem</p>
+                                  <p>En un momento te confirmo</p>
                                 </div>
                               </div>
                             </div>
@@ -249,53 +249,53 @@ img{ max-width:100%;}
                                 <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                                 <div class="chat_ib">
                                   <h5>Operador 7 </h5>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus culpa hic dolorem</p>
+                                  <p>Que tal compañero?</p>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="mesgs">
-                          <div class="msg_history">
+                        <div class="mesgs" >
+                          <div class="msg_history" id="msgBox">
                             <div class="incoming_msg">
                               <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                               <div class="received_msg">
                                 <div class="received_withd_msg">
-                                  <p>lorem lero lero lero lorem memo</p>
+                                  <p>Hola! Me di cuenta de que me quisiste contactar, en que te puedo ayudar?</p>
                                   </div>
                               </div>
                             </div>
                             <div class="outgoing_msg">
                               <div class="sent_msg">
-                                <p>memolero lero rero ero rero ara lero ara ara</p>
+                                <p>Quisiera preguntarte si podrías realizar un trabajo este mes para mí</p>
                                 </div>
                             </div>
                             <div class="incoming_msg">
                               <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                               <div class="received_msg">
                                 <div class="received_withd_msg">
-                                  <p>lorememe ere arame lorere memero ero roe</p>
+                                  <p>Con gusto! Podrías explicarme los detalles por correo?</p>
                                  </div>
                               </div>
                             </div>
                             <div class="outgoing_msg">
                               <div class="sent_msg">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi odit nobis, perferendis maxime, dignissimos vitae corporis minima nisi beatae fugit explicabo.</p>
+                                <p>Si, claro! Te mando un correo a más tardar hoy en la noche</p>
                                  </div>
                             </div>
                             <div class="incoming_msg">
                               <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                               <div class="received_msg">
                                 <div class="received_withd_msg">
-                                  <p>norem</p>
+                                  <p>Perfecto! Cuanto tiempo va a requerir el trabajo?</p>
                                   </div>
                               </div>
                             </div>
                           </div>
                           <div class="type_msg">
                             <div class="input_msg_write">
-                              <input type="text" class="write_msg" placeholder="Type a message" />
-                              <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                              <input type="text" class="write_msg" placeholder="Type a message" id="msgToSend" />
+                              <button class="msg_send_btn" type="button" id="msgSendBtn"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
                             </div>
                           </div>
                         </div>
@@ -365,6 +365,7 @@ img{ max-width:100%;}
         </tr>
     </table> -->
     <!-- Optional JavaScript -->
+    <script src="/mensajes.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
