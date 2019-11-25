@@ -71,7 +71,7 @@
       "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
       "available": "Por hora",
       "description": "soy honesto",
-      "status": "inactivo"
+      "status": "active"
     },
     {
       "id": "3378195308",
@@ -116,23 +116,55 @@
       "recomendationCard": "",
       "description": "",
       "status": "active"
+    },
+    {
+      "name": "Michel",
+      "id": "3321095694",
+      "lastname": "Mora",
+      "mail": "flp@hotmail.com",
+      "licensePDF": "https://encrypted-tbn0.gstatic.com/images",
+      "officialID": "https://encrypted-tbn0.gstatic.com/images",
+      "city": "Guadalajara",
+      "state": "Jalisco",
+      "cellphone": "3313519904",
+      "operatorIMG": "https://randomuser.me/api/portraits/men/81.jpg",
+      "noCRB": "https://encrypted-tbn0.gstatic.com/images",
+      "yearsExperience": "3",
+      "available": "Por mes",
+      "rfc": "FEBC35FFDDSL2231",
+      "user": "Michel",
+      "password": "12345",
+      "type": "operador",
+      "previousJob1": {
+        "company": "TONKA",
+        "referenceContact": {
+          "name": "PEPE",
+          "cellphone": ""
+        }
+      },
+      "previousJob2": {
+        "company": "INTEL",
+        "referenceContact": {
+          "name": "JUAN",
+          "cellphone": ""
+        }
+      },
+      "previousJob3": {
+        "company": "Tonka",
+        "referenceContact": {
+          "name": "Roberto",
+          "cellphone": "3321100494"
+        }
+      },
+      "machinesOperated": [
+        "3"
+      ],
+      "recomendationCard": "https://encrypted-tbn0.gstatic.com/images",
+      "description": "Soy un trabajador Trabajndo en trabajos que requieren de mi atencion trabajando",
+      "status": "inactivo"
     }
   ],
   "Maquinaria": [
-    {
-      "id": 1,
-      "type": "Técnica de carreteras",
-      "dealer": "Caterpillar CS431C",
-      "model": "m3054T",
-      "specifications": "http://maquqam.com/tecnicas/carreteras-3337/caterpillar/cs431c.html",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti.",
-      "img": "http://s7d2.scene7.com/is/image/Caterpillar/CM20180925-52478-35901?$cc-s$",
-      "units": "3",
-      "hourCost": "950",
-      "dayCost": "300",
-      "weekCost": "3500",
-      "transport": "SI"
-    },
     {
       "id": 2,
       "type": "Mini excavador",

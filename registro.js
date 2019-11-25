@@ -104,7 +104,7 @@ BtnRegOperador.addEventListener("click", function (event) {
         licensePDF:document.getElementById("licensePDF").value,
         officialID:document.getElementById("officialID").value,
         city: document.getElementById("OPcity").value,
-        state: (document.getElementById("OPcity").value == "Guadalajara") ? "Jalisco" : (document.getElementById("city").value == "Monterrey") ? "Nuevo Leon" : "Ciudad de México",
+        state: (document.getElementById("OPcity").value == "Guadalajara") ? "Jalisco" : (document.getElementById("OPcity").value == "Monterrey") ? "Nuevo Leon" : "Ciudad de México",
         cellphone: document.getElementById("OPphone").value,
         operatorIMG: document.getElementById("operatorIMG").value,
         noCRB:document.getElementById("noCRB").value,

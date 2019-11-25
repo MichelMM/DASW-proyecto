@@ -268,7 +268,7 @@ function ActivarOperador(key) {
 }
 
 function ActivaOperador(User) {
-    User.status = "activo";
+    User.status = "active";
     event.preventDefault();
     // 1. Crear XMLHttpRequest object
     let xhr = new XMLHttpRequest();
