@@ -70,7 +70,8 @@
       "type": "operador",
       "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
       "available": "Por hora",
-      "description": "soy honesto"
+      "description": "soy honesto",
+      "status":"active"
     },
     {
       "id": "3378195308",
@@ -113,56 +114,8 @@
       },
       "machinesOperated": [],
       "recomendationCard": "",
-      "description": ""
-    },
-    {
-      "name": "juano",
-      "id": "3317195376",
-      "lastname": "galvez",
-      "mail": "juana@gmail.com",
-      "licensePDF": "http://jornadasciberseguridad.riasc.unileon.es/archivos/ejemplo_esp.pdf",
-      "officialID": "https://media.nbcphiladelphia.com/images/1941*1092/pennsylvania+real+id+03012019.jpg",
-      "city": "Guadalajara",
-      "state": "Jalisco",
-      "cellphone": "3317195376",
-      "operatorIMG": "https://randomuser.me/api/portraits/men/1.jpg",
-      "noCRB": "https://si.ua.es/es/documentos/documentacion/pdf-s/mozilla12-pdf.pdf",
-      "yearsExperience": "8",
-      "available": "Por hora",
-      "rfc": "jiu",
-      "user": "juano",
-      "password": "1",
-      "type": "operador",
-      "previousJob1": {
-        "company": "",
-        "referenceContact": {
-          "name": "",
-          "cellphone": ""
-        }
-      },
-      "previousJob2": {
-        "company": "",
-        "referenceContact": {
-          "name": "",
-          "cellphone": ""
-        }
-      },
-      "previousJob3": {
-        "company": "",
-        "referenceContact": {
-          "name": "",
-          "cellphone": ""
-        }
-      },
-      "machinesOperated": [
-        "1",
-        "3",
-        "3",
-        "",
-        ""
-      ],
-      "recomendationCard": "undefined",
-      "description": "que rollo con el pollo"
+      "description": "",
+      "status":"active"
     }
   ],
   "Maquinaria": [
@@ -244,12 +197,12 @@
       "id": 1
     }
   ],
-  "ADMIN":[
+  "ADMIN": [
     {
-      "id":1,
-      "email":"admin@gmail.com",
-      "password":"1",
-      "img":"https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-administration-icon-in-trendy-style-isolated-background-png-image_1538647.jpg"
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "1",
+      "img": "https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-administration-icon-in-trendy-style-isolated-background-png-image_1538647.jpg"
     }
   ]
 }
