@@ -35,7 +35,8 @@ btnRegistrarMaquina.addEventListener("click", function(event){
         hourCost:document.getElementById("inputHour").value,
         dayCost:document.getElementById("inputDay").value,
         weekCost:document.getElementById("inputWeek").value,
-        transport: document.getElementById("inputTransport").value
+        transport: document.getElementById("inputTransport").value,
+        units: 1
     }
     registrarMaquina(objeto);
 })
