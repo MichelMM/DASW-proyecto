@@ -137,7 +137,8 @@ BtnRegOperador.addEventListener("click", function (event) {
           },
         machinesOperated:[],
         recomendationCard:"",
-        description:""
+        description:"",
+        status:"active"
     }
     registrarOperador(objeto);
     event.preventDefault();
