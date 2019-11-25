@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <li class="list-group-item"><b>Estado:</b>  ${contratistas[contratista].companyAdd.state}</li>
                         <li class="list-group-item"><b>Ciudad:</b> ${contratistas[contratista].companyAdd.city}</li>
                     </ul>
-                    <button type="button" class="btn btn-primary">Contactar</button>
+                    <a href="/mensajes.html" type="button" class="btn btn-primary btn-rounded" >Contactar</a>
                     <button onclick=DeleteContratista(${contratistas[contratista].id}) type="button" class="btn btn-primary btn-rounded btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Eliminar Contratista</button></<button>
                 </td>
                 <td>
