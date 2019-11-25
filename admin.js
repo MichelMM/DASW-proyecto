@@ -85,11 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
                             <i class="list-group-item"> <b>Nombre:</b> ${maquinarias[maquinaria].type} </i>
                             <li class="list-group-item"><b>Fabricante:</b> ${maquinarias[maquinaria].dealer}</li>
                             <li class="list-group-item"><b>Modelo:</b> ${maquinarias[maquinaria].model}</li>
-                            <li class="list-group-item"> <b>Descripción:</b>${maquinarias[maquinaria].description}</li>
-                            <li class="list-group-item"><b>Costo por Hora:</b>${maquinarias[maquinaria].hourCost}</li>
-                            <li class="list-group-item"><b>Costo por Día:</b>${maquinarias[maquinaria].dayCost}</li>
-                            <li class="list-group-item"><b>Costo por Semana:</b>${maquinarias[maquinaria].weekCost}</li>
-                            <li class="list-group-item"><b>Transporte:</b>${maquinarias[maquinaria].transport}</li>
+                            <li class="list-group-item"> <b>Unidades Disponibles:</b> ${maquinarias[maquinaria].units}</li>
+                            <li class="list-group-item"><b>Costo por Hora:</b>  ${maquinarias[maquinaria].hourCost}</li>
+                            <li class="list-group-item"><b>Costo por Día:</b>  ${maquinarias[maquinaria].dayCost}</li>
+                            <li class="list-group-item"><b>Costo por Semana:</b>  ${maquinarias[maquinaria].weekCost}</li>
+                            <li class="list-group-item"><b>Transporte:</b>  ${maquinarias[maquinaria].transport}</li>
                         </ul>
                         <button onclick=EditMaquinaria(${maquinarias[maquinaria].id}) type="button" class="btn btn-primary btn-rounded" data-toggle="button" aria-pressed="false" autocomplete="off">Editar Maquinaria</button></<button>
                         <button onclick=DeleteMaquinaria(${maquinarias[maquinaria].id}) type="button" class="btn btn-primary btn-rounded btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Eliminar Maquinaria</button></<button>

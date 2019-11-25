@@ -127,6 +127,7 @@
       "specifications": "http://maquqam.com/tecnicas/carreteras-3337/caterpillar/cs431c.html",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti.",
       "img": "http://s7d2.scene7.com/is/image/Caterpillar/CM20180925-52478-35901?$cc-s$",
+      "units": "3",
       "hourCost": "950",
       "dayCost": "300",
       "weekCost": "3500",
@@ -143,7 +144,8 @@
       "hourCost": "500",
       "dayCost": "700",
       "weekCost": "1100",
-      "transport": "SI"
+      "transport": "SI",
+      "units": 2
     },
     {
       "id": "3",
@@ -156,7 +158,8 @@
       "hourCost": "250",
       "dayCost": "700",
       "weekCost": "3200",
-      "transport": "SI"
+      "transport": "SI",
+      "units": 2
     },
     {
       "id": "7",
@@ -169,7 +172,8 @@
       "hourCost": "150",
       "dayCost": "1700",
       "weekCost": "20300",
-      "transport": "SI"
+      "transport": "SI",
+      "units": 2
     },
     {
       "id": "11",
@@ -182,7 +186,8 @@
       "hourCost": "700",
       "dayCost": "6000",
       "weekCost": "23000",
-      "transport": "NO"
+      "transport": "NO",
+      "units": 2
     }
   ],
   "Comentarios": [
