@@ -1,6 +1,6 @@
 let arrayOperadores = [];
 let arrayContratistas = [];
-let arrayMaquinaria = [];
+let arrayMaquinarias = [];
 document.addEventListener("DOMContentLoaded", () => {
     OperadorRequest(null, () => {
         let operadores = JSON.parse(localStorage.operadores);
@@ -69,7 +69,42 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("No Fue posible cargar contenido")
     });
 
+    MaquinariaRequest(null, () => {
+        let maquinarias = JSON.parse(localStorage.maquinarias);
+        console.log(maquinarias);
+        for (let maquinaria in maquinarias) {
+            let HTMLMaquinaria =
+                `<table width=100%>
+                <tr>
+                    <td rowspan="5" width="20%"><img width="200px"
+                            src="${maquinarias[maquinaria].img}"
+                            alt=""></td>
 
+                    <td align="left" width="50%">
+                        <ul class="list-group">
+                            <i class="list-group-item"> <b>Nombre:</b> ${maquinarias[maquinaria].type} </i>
+                            <li class="list-group-item"><b>Fabricante:</b> ${maquinarias[maquinaria].dealer}</li>
+                            <li class="list-group-item"><b>Modelo:</b> ${maquinarias[maquinaria].model}</li>
+                            <li class="list-group-item"> <b>Descripción:</b>${maquinarias[maquinaria].description}</li>
+                            <li class="list-group-item"><b>Costo por Hora:</b>${maquinarias[maquinaria].hourCost}</li>
+                            <li class="list-group-item"><b>Costo por Día:</b>${maquinarias[maquinaria].dayCost}</li>
+                            <li class="list-group-item"><b>Costo por Semana:</b>${maquinarias[maquinaria].weekCost}</li>
+                            <li class="list-group-item"><b>Transporte:</b>${maquinarias[maquinaria].transport}</li>
+                        </ul>
+                        <button onclick=EditMaquinaria(${maquinarias[maquinaria].id}) type="button" class="btn btn-primary btn-rounded" data-toggle="button" aria-pressed="false" autocomplete="off">Editar Maquinaria</button></<button>
+                        <button onclick=DeleteMaquinaria(${maquinarias[maquinaria].id}) type="button" class="btn btn-primary btn-rounded btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Eliminar Maquinaria</button></<button>
+                        </td>
+                    <td></td>
+                </tr>
+            </table>
+            `
+            arrayMaquinarias.push(HTMLMaquinaria);
+        }
+        fillMaquinarias();
+
+    }, () => {
+        console.log("No Fue posible cargar contenido")
+    });
 });
 
 function fillOperadores() {
@@ -78,6 +113,10 @@ function fillOperadores() {
 
 function fillContratistas() {
     document.getElementById("divContratistas").innerHTML = arrayContratistas.join("<p></p>");
+}
+
+function fillMaquinarias() {
+    document.getElementById("divMaquinarias").innerHTML = arrayMaquinarias.join("<p></p>");
 }
 
 function OperadorRequest(object, cbOk, cbErr) {
@@ -107,6 +146,22 @@ function ContratistaRequest(object, cbOk, cbErr) {
             cbErr();
         } else {
             localStorage.setItem("contratistas", xhr.responseText);
+            cbOk();
+        }
+    };
+}
+
+function MaquinariaRequest(object, cbOk, cbErr) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', `http://localhost:3000/Maquinaria`);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send([JSON.stringify(object)]);
+    xhr.onload = function () {
+        if (xhr.status != 200) {
+            alert(xhr.status + ': ' + xhr.statusText + 'Error, no se ha podido registrar el usuario');
+            cbErr();
+        } else {
+            localStorage.setItem("maquinarias", xhr.responseText);
             cbOk();
         }
     };
@@ -259,3 +314,35 @@ function DeleteContratista(key) {
     };
 
 }
+
+function DeleteMaquinaria(key) {
+    // 1. Crear XMLHttpRequest object
+    let xhr = new XMLHttpRequest();
+    // 2. Configurar: PUT actualizar archivo
+    xhr.open('DELETE', `http://localhost:3000/Maquinaria/${key}`);
+    // 3. indicar tipo de datos JSON
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('x-auth', localStorage.token);
+    xhr.setRequestHeader('x-user-token', localStorage.userToken);
+    // 4. Enviar solicitud a la red
+    xhr.send(null);
+    // 5. Una vez recibida la respuesta del servidor
+    xhr.onload = function () {
+        if (xhr.status != 200) { // analizar el estatus de la respuesta HTTP
+            // Ocurrió un error
+            alert("ERROR");
+            alert(xhr.status + ': ' + xhr.statusText); // e.g. 404: Not Found
+        } else {
+            // Significa que fue exitoso
+            window.location.href = "/admin.html";
+            alert("Maquina Eliminada");
+        }
+    };
+
+}
+
+function EditMaquinaria(key){
+    localStorage.setItem("maquina", key);
+    window.location.href="/editMaquinaria.html";
+}
+
