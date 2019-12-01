@@ -51,9 +51,9 @@ let nombreContratista = document.getElementById("contName");
 let estadoContratista = document.getElementById("contState");
 let ciudadContratista = document.getElementById("contCity");
 let informacionPago = document.getElementById("payInfo");
-let fechaInicio = document.getElementById("beginDate").value;
-let fechaFin = document.getElementById("endDate").value;
-let diaPago = document.getElementById("payDate").value;
+let fechaInicio = document.getElementById("beginDate");
+let fechaFin = document.getElementById("endDate");
+let diaPago = document.getElementById("payDate");
 let compName=document.getElementById("compName");
 let btnContratar = document.getElementById("btnContratar");
 
@@ -80,9 +80,9 @@ btnContratar.addEventListener("click", function () {
             city: ciudadContratista.value,
             payInfo: informacionPago.value
         },
-        beginContractDate: fechaInicio,
-        endContractDate: fechaFin,
-        PaymentDay: diaPago
+        beginContractDate: fechaInicio.value,
+        endContractDate: fechaFin.value,
+        PaymentDay: diaPago.value
     }
     postContratacion(contratacion);
 })

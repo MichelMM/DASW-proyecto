@@ -285,6 +285,24 @@
       "endContractDate": "2019-07-05",
       "PaymentDay": "2019-07-25",
       "id": "h-VEUHS"
+    },
+    {
+      "Operador": {
+        "name": "Kevin",
+        "state": "Jalisco",
+        "city": "Guadalajara"
+      },
+      "Contratista": {
+        "CompanyName": "ki",
+        "name": "Dario",
+        "state": "Jalisco",
+        "city": "Guadalajara",
+        "payInfo": "2"
+      },
+      "beginContractDate": "4444-04-04",
+      "endContractDate": "0666-06-06",
+      "PaymentDay": "0777-07-07",
+      "id": "7Sl16Cf"
     }
   ],
   "contratacionesMaquina": [
@@ -305,6 +323,24 @@
       "endContractDate": "2019-07-05",
       "PaymentDay": "2019-07-05",
       "id": "OSvVoTk"
+    },
+    {
+      "Maquina": {
+        "type": "Mini excavador",
+        "dealer": "Kobelco SK30SR-5",
+        "model": "3TNV88"
+      },
+      "Contratista": {
+        "CompanyName": "ki",
+        "name": "Dario",
+        "state": "Jalisco",
+        "city": "Guadalajara",
+        "payInfo": "2"
+      },
+      "beginContractDate": "1111-11-11",
+      "endContractDate": "2222-02-22",
+      "PaymentDay": "0333-03-31",
+      "id": "JandAMt"
     }
   ]
 }
