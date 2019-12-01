@@ -1,6 +1,8 @@
 let arrayOperadores = [];
 let arrayContratistas = [];
 let arrayMaquinarias = [];
+let arrayContraOperador = [];
+let arrayContraMaquina = [];
 document.addEventListener("DOMContentLoaded", () => {
     OperadorRequest(null, () => {
         let operadores = JSON.parse(localStorage.operadores);
@@ -40,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         for (let contratista in contratistas) {
             let HTMLContratista =
                 `<table>
-
             <tr>
                 <td rowspan="5" width="20%"><img width="200px"
                         src="${contratistas[contratista].img}" alt=""></td>
@@ -79,7 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     <td rowspan="5" width="20%"><img width="200px"
                             src="${maquinarias[maquinaria].img}"
                             alt=""></td>
-
                     <td align="left" width="50%">
                         <ul class="list-group">
                             <i class="list-group-item"> <b>Nombre:</b> ${maquinarias[maquinaria].type} </i>
@@ -105,6 +105,92 @@ document.addEventListener("DOMContentLoaded", () => {
     }, () => {
         console.log("No Fue posible cargar contenido")
     });
+
+    ContratacionesOperadorRequest(null, () => {
+        let ContratacionesOperador = JSON.parse(localStorage.contratacionesOperador);
+        for (let contratacionOperador in ContratacionesOperador) {
+            let HTMLcontratacionOperador =
+                `
+                <div style="background:rgb(250, 248, 248)" class="form-row rounded">
+                <table> 
+                <th>Compañia: ${ContratacionesOperador[contratacionOperador].Contratista.CompanyName} </th>
+                <tr>
+                            <td>
+                                <ul class="list-group"><b></b>
+                                    <li class="list-group-item"> <b>Nombre:</b> ${ContratacionesOperador[contratacionOperador].Contratista.name}</li>
+                                    <li class="list-group-item"><b>Estado:</b> ${ContratacionesOperador[contratacionOperador].Contratista.state}</li>
+                                    <li class="list-group-item"><b>Ciudad:</b> ${ContratacionesOperador[contratacionOperador].Contratista.city}</li>
+                                    <li class="list-group-item"><b>Tarjeta:</b> ${ContratacionesOperador[contratacionOperador].Contratista.payInfo}</li>
+                                </ul>
+                            </td>
+                            <td align="left">
+                                <ul class="list-group">Operador
+                                <li class="list-group-item"> <b>Nombre:</b> ${ContratacionesOperador[contratacionOperador].Operador.name}</li>
+                                <li class="list-group-item"><b>Estado:</b> ${ContratacionesOperador[contratacionOperador].Operador.state}</li>
+                                <li class="list-group-item"><b>Ciudad:</b> ${ContratacionesOperador[contratacionOperador].Operador.city}</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="list-group">Datos de Contratación
+                                    <li class="list-group-item"><b>Fecha Contratacion:</b>${ContratacionesOperador[contratacionOperador].beginContractDate}</li>
+                                    <li class="list-group-item"><b>Fecha Fin Contratacion:</b>${ContratacionesOperador[contratacionOperador].endContractDate}</li>
+                                    <li class="list-group-item"><b>Fecha de Pago:</b>${ContratacionesOperador[contratacionOperador].PaymentDay}</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+            `
+            arrayContraOperador.push(HTMLcontratacionOperador);
+        }
+        fillContratacionesOperador();
+
+    }, () => {
+        console.log("No Fue posible cargar contenido")
+    });
+
+    ContratacionesMaquinaRequest(null, () => {
+        let ContratacionesMaquina = JSON.parse(localStorage.contratacionesMaquina);
+        for (let contratacionMaquina in ContratacionesMaquina) {
+            let HTMLcontratacionMaquina =
+                `
+                <div style="background:rgb(250, 248, 248)" class="form-row rounded">
+                <table> 
+                <th>Compañia: ${ContratacionesMaquina[contratacionMaquina].Contratista.CompanyName} </th>
+                <tr>
+                            <td>
+                                <ul class="list-group"><b>Contratista</b>
+                                    <li class="list-group-item"> <b>Nombre:</b> ${ContratacionesMaquina[contratacionMaquina].Contratista.name}</li>
+                                    <li class="list-group-item"><b>Estado:</b> ${ContratacionesMaquina[contratacionMaquina].Contratista.state}</li>
+                                    <li class="list-group-item"><b>Ciudad:</b> ${ContratacionesMaquina[contratacionMaquina].Contratista.city}</li>
+                                    <li class="list-group-item"><b>Tarjeta:</b> ${ContratacionesMaquina[contratacionMaquina].Contratista.payInfo}</li>
+                                </ul>
+                            </td>
+                            <td align="left">
+                                <ul class="list-group"><b>Máquina</b>
+                                <li class="list-group-item"><b>Nombre:</b> ${ContratacionesMaquina[contratacionMaquina].Maquina.type}<li>
+                                <li class="list-group-item"><b>Modelo:</b> ${ContratacionesMaquina[contratacionMaquina].Maquina.model}</li>
+                                <li class="list-group-item"><b>Marca:</b> ${ContratacionesMaquina[contratacionMaquina].Maquina.dealer}</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="list-group"><b>Datos de Contratación</b>
+                                    <li class="list-group-item"><b>Fecha Contratacion:</b>${ContratacionesMaquina[contratacionMaquina].beginContractDate}</li>
+                                    <li class="list-group-item"><b>Fecha Fin Contratacion:</b>${ContratacionesMaquina[contratacionMaquina].endContractDate}</li>
+                                    <li class="list-group-item"><b>Fecha de Pago:</b>${ContratacionesMaquina[contratacionMaquina].PaymentDay}</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+            `
+            arrayContraMaquina.push(HTMLcontratacionMaquina);
+        }
+        fillContratacionesMaquina();
+
+    }, () => {
+        console.log("No Fue posible cargar contenido")
+    });
 });
 
 function fillOperadores() {
@@ -117,6 +203,14 @@ function fillContratistas() {
 
 function fillMaquinarias() {
     document.getElementById("divMaquinarias").innerHTML = arrayMaquinarias.join("<p></p>");
+}
+
+function fillContratacionesOperador() {
+    document.getElementById("divContratacionesOperador").innerHTML = arrayContraOperador.join("<p></p>");
+}
+
+function fillContratacionesMaquina() {
+    document.getElementById("divContratacionesMaquinaria").innerHTML = arrayContraMaquina.join("<p></p>");
 }
 
 function OperadorRequest(object, cbOk, cbErr) {
@@ -162,6 +256,38 @@ function MaquinariaRequest(object, cbOk, cbErr) {
             cbErr();
         } else {
             localStorage.setItem("maquinarias", xhr.responseText);
+            cbOk();
+        }
+    };
+}
+
+function ContratacionesOperadorRequest(object, cbOk, cbErr) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', `http://localhost:3000/contratacionesOperador`);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send([JSON.stringify(object)]);
+    xhr.onload = function () {
+        if (xhr.status != 200) {
+            alert(xhr.status + ': ' + xhr.statusText + 'Error, no se ha podido registrar el usuario');
+            cbErr();
+        } else {
+            localStorage.setItem("contratacionesOperador", xhr.responseText);
+            cbOk();
+        }
+    };
+}
+
+function ContratacionesMaquinaRequest(object, cbOk, cbErr) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', `http://localhost:3000/contratacionesMaquina`);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send([JSON.stringify(object)]);
+    xhr.onload = function () {
+        if (xhr.status != 200) {
+            alert(xhr.status + ': ' + xhr.statusText + 'Error, no se ha podido registrar el usuario');
+            cbErr();
+        } else {
+            localStorage.setItem("contratacionesMaquina", xhr.responseText);
             cbOk();
         }
     };
@@ -345,4 +471,3 @@ function EditMaquinaria(key){
     localStorage.setItem("maquina", key);
     window.location.href="/editMaquinaria.html";
 }
-

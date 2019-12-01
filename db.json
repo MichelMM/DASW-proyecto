@@ -198,11 +198,11 @@
       "specifications": "http://maquqam.com/tecnicas/construccion-6259/kobelco/sk30sr-5.html",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum qui quas corporis facere quod? Blanditiis velit quasi dolorum delectus illo mollitia consequuntur consectetur totam esse natus. Odit facere ex quisquam?Expedita quos dolorem, eligendi provident earum commodi voluptatem, magnam veritatis sit, quod voluptatum est excepturi eum perspiciatis aperiam! Animi facere laudantium, dolor veniam maiores consequuntur exercitationem magni minus eum corrupti.",
       "img": "https://media.sandhills.com/img.axd?id=4291015129&wid=4326185391&rwl=False&p=&ext=&w=1200&h=630&t=&lp=MAT&c=True&wt=False&sz=Max&rt=0&checksum=1tMzQIU5j4fwEGO2wn9ht1Su7wAJC8s17RvSCiDz4Ds%3D",
-      "hourCost": "500",
+      "units": "2",
+      "hourCost": "100",
       "dayCost": "700",
       "weekCost": "1100",
-      "transport": "SI",
-      "units": 2
+      "transport": "SI"
     },
     {
       "id": "3",
@@ -269,29 +269,13 @@
   ],
   "contratacionesOperador": [
     {
-      "id": "",
-      "Operador": {
-        "name": "",
-        "state": "",
-        "city": ""
-      },
-      "Contratista": {
-        "name": "",
-        "state": "",
-        "city": "",
-        "payInfo": ""
-      },
-      "beginContractDate": "",
-      "endContractDate": "",
-      "PaymentDay": ""
-    },
-    {
       "Operador": {
         "name": "Kevin",
         "state": "Jalisco",
         "city": "Guadalajara"
       },
       "Contratista": {
+        "CompanyName": "ITESO",
         "name": "Miguel",
         "state": "Jalisco",
         "city": "Guadalajara",
@@ -305,38 +289,22 @@
   ],
   "contratacionesMaquina": [
     {
-      "id": "",
-      "Maquina": {
-        "type": "",
-        "dealer": "",
-        "model": ""
-      },
-      "Contratista": {
-        "name": "",
-        "state": "",
-        "city": "",
-        "payInfo": ""
-      },
-      "beginContractDate": "",
-      "endContractDate": "",
-      "PaymentDay": ""
-    },
-    {
       "Maquina": {
         "type": "Mini excavador",
         "dealer": "Kobelco SK30SR-5",
         "model": "3TNV88"
       },
       "Contratista": {
-        "name": "Miguel",
+        "CompanyName": "ki",
+        "name": "Dario",
         "state": "Jalisco",
         "city": "Guadalajara",
-        "payInfo": "Tarjeta"
+        "payInfo": "2"
       },
-      "beginContractDate": "",
-      "endContractDate": "",
-      "PaymentDay": "",
-      "id": "A9EzSPv"
+      "beginContractDate": "2019-07-05",
+      "endContractDate": "2019-07-05",
+      "PaymentDay": "2019-07-05",
+      "id": "OSvVoTk"
     }
   ]
 }

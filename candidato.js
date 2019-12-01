@@ -54,13 +54,14 @@ let informacionPago = document.getElementById("payInfo");
 let fechaInicio = document.getElementById("beginDate").value;
 let fechaFin = document.getElementById("endDate").value;
 let diaPago = document.getElementById("payDate").value;
-
+let compName=document.getElementById("compName");
 let btnContratar = document.getElementById("btnContratar");
 
 nombreOperador.value = OPinfo.name;
 estadoOperador.value = OPinfo.state;
 ciudadOperador.value = OPinfo.city;
 nombreContratista.value = CONinfo[0].name;
+compName.value=CONinfo[0].companyName;
 estadoContratista.value = CONinfo[0].companyAdd.state;
 ciudadContratista.value = CONinfo[0].companyAdd.city;
 informacionPago.value = CONinfo[0].payInfo;
@@ -73,6 +74,7 @@ btnContratar.addEventListener("click", function () {
             city: ciudadOperador.value
         },
         Contratista: {
+            CompanyName:compName.value,
             name: nombreContratista.value,
             state: estadoContratista.value,
             city: ciudadContratista.value,

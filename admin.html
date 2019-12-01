@@ -41,11 +41,47 @@
                 <a class="list-group-item list-group-item-action" id="list-maquinaria-list" data-toggle="list"
                     href="#list-messages" role="tab" aria-controls="messages">Maquinaria</a>
                 <a class="list-group-item list-group-item-action" id="list-contrataciones-list" data-toggle="list"
-                    href="#list-settings" role="tab" aria-controls="settings">Contrataciones</a>
+                    href="#list-settings" role="tab" aria-controls="settings">Contrataciones Operadores</a>
+                <a class="list-group-item list-group-item-action" id="list-contract-list" data-toggle="list"
+                    href="#list-contract" role="tab" aria-controls="settings">Contrataciones Maquinaria</a>
             </div>
         </div>
         <div class="col-8">
             <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade" id="list-contract" role="tabpanel" aria-labelledby="list-contract-list">
+                        <div>
+                                <nav class="navbar navbar-expand navbar-light bg-faded filtros">
+                                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                        <div class="form-group">
+                                            <label for=""></label>
+                                            <select class="form-control" name="" id="">
+                                                <option>Guadalajara</option>
+                                                <option>Monterrey</option>
+                                                <option>CDMX</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group ">
+                                            <label for="date" class="text-heading h6 font-weight-semi-bold">Fecha de
+                                                Contratacion</label>
+                                            <div class="input-group date" data-provide="datepicker">
+                                                <input type="text" name="date" class="form-control" placeholder="DD/MM/YY"
+                                                    id="datetimepicker1">
+                                                <div class="input-group-append">
+                                                    <button class="btn" type="button">
+                                                        <i class="fa fa-calendar text-primary" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                    <form class="form-inline my-2 my-lg-0">
+                                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                                    </form>
+                                </nav>
+                            </div>
+                            <div id="divContratacionesMaquinaria">
+                            </div>
+                </div>
                 <div class="tab-pane fade show active" id="list-home" role="tabpanel"
                     aria-labelledby="list-operador-list">
                     <div>
@@ -80,7 +116,7 @@
                         </nav>
                     </div>
                     <div id="divOperadores"></div>
-            </div>
+                </div>
                 <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-contratista-list">
                     <div>
                         <nav class="navbar navbar-expand navbar-light bg-faded filtros">
@@ -174,133 +210,30 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </ul>
                             <form class="form-inline my-2 my-lg-0">
                                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
                             </form>
                         </nav>
                     </div>
-                    <table>
-                        <th>Contratacion 1</th>
-                        <tr>
-                            <td align="left">
-                                <ul class="list-group">Operador
-                                    <li class="list-group-item"> <b>Nombre:</b> Operador Generico</li>
-                                    <li class="list-group-item"> <b>Busca trabajo:</b> Temporal</li>
-                                    <li class="list-group-item"><b>Estado:</b> Jalisco</li>
-                                    <li class="list-group-item"><b>Ciudad:</b> Guadalajara</li>
-                                    <li class="list-group-item"><b>Fecha Contratacion:</b>22/10/2019</li>
-                                    <li class="list-group-item"><b>Fecha Fin Contratacion:</b>22/11/2019</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="list-group">Maquinaria
-                                    <i class="list-group-item"> <b>Nombre:</b> Maquina Aplanadora </i>
-                                    <li class="list-group-item"><b>Fabricante:</b> CAT</li>
-                                    <li class="list-group-item"><b>Modelo:</b> frT4s</li>
-                                    <li class="list-group-item"> <b>Año:</b> 2014</li>
-                                    <li class="list-group-item"><b>Estado(s):</b> Jalisco, Matamoros</li>
-                                    <li class="list-group-item"><b>Ciudad(es):</b> Guadalajara, Matamoros</li>
-                                </ul>
-                            <td>
-                                <ul class="list-group">Empresa
-                                    <li class="list-group-item"> <b>Nombre:</b> Operador Generico</li>
-                                    <li class="list-group-item"> <b>Busca trabajo:</b> Temporal</li>
-                                    <li class="list-group-item"><b>Estado:</b> Jalisco</li>
-                                    <li class="list-group-item"><b>Ciudad:</b> Guadalajara</li>
-                                    <li class="list-group-item"><b>Tarjeta:</b> **********976</li>
-                                    <li class="list-group-item"><b>Fecha de Pago:</b>22/10/2019</li>
-
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <th>Contratacion 2</th>
-                        <tr>
-                            <td align="left">
-                                <ul class="list-group">Operador
-                                    <li class="list-group-item"> <b>Nombre:</b> Operador Generico</li>
-                                    <li class="list-group-item"> <b>Busca trabajo:</b> Temporal</li>
-                                    <li class="list-group-item"><b>Estado:</b> Jalisco</li>
-                                    <li class="list-group-item"><b>Ciudad:</b> Guadalajara</li>
-                                    <li class="list-group-item"><b>Fecha Contratacion:</b>22/10/2019</li>
-                                    <li class="list-group-item"><b>Fecha Fin Contratacion:</b>22/11/2019</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="list-group">Maquinaria
-                                    <i class="list-group-item"> <b>Nombre:</b> Maquina Aplanadora </i>
-                                    <li class="list-group-item"><b>Fabricante:</b> CAT</li>
-                                    <li class="list-group-item"><b>Modelo:</b> frT4s</li>
-                                    <li class="list-group-item"> <b>Año:</b> 2014</li>
-                                    <li class="list-group-item"><b>Estado(s):</b> Jalisco, Matamoros</li>
-                                    <li class="list-group-item"><b>Ciudad(es):</b> Guadalajara, Matamoros</li>
-                                </ul>
-                            <td>
-                                <ul class="list-group">Empresa
-                                    <li class="list-group-item"> <b>Nombre:</b> Operador Generico</li>
-                                    <li class="list-group-item"> <b>Busca trabajo:</b> Temporal</li>
-                                    <li class="list-group-item"><b>Estado:</b> Jalisco</li>
-                                    <li class="list-group-item"><b>Ciudad:</b> Guadalajara</li>
-                                    <li class="list-group-item"><b>Tarjeta:</b> **********976</li>
-                                    <li class="list-group-item"><b>Fecha de Pago:</b>22/10/2019</li>
-
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                    <table>
-                        <th>Contratacion 3</th>
-                        <tr>
-                            <td align="left">
-                                <ul class="list-group">Operador
-                                    <li class="list-group-item"> <b>Nombre:</b> Operador Generico</li>
-                                    <li class="list-group-item"> <b>Busca trabajo:</b> Temporal</li>
-                                    <li class="list-group-item"><b>Estado:</b> Jalisco</li>
-                                    <li class="list-group-item"><b>Ciudad:</b> Guadalajara</li>
-                                    <li class="list-group-item"><b>Fecha Contratacion:</b>22/10/2019</li>
-                                    <li class="list-group-item"><b>Fecha Fin Contratacion:</b>22/11/2019</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul class="list-group">Maquinaria
-                                    <i class="list-group-item"> <b>Nombre:</b> Maquina Aplanadora </i>
-                                    <li class="list-group-item"><b>Fabricante:</b> CAT</li>
-                                    <li class="list-group-item"><b>Modelo:</b> frT4s</li>
-                                    <li class="list-group-item"> <b>Año:</b> 2014</li>
-                                    <li class="list-group-item"><b>Estado(s):</b> Jalisco, Matamoros</li>
-                                    <li class="list-group-item"><b>Ciudad(es):</b> Guadalajara, Matamoros</li>
-                                </ul>
-                            <td>
-                                <ul class="list-group">Empresa
-                                    <li class="list-group-item"> <b>Nombre:</b> Operador Generico</li>
-                                    <li class="list-group-item"> <b>Busca trabajo:</b> Temporal</li>
-                                    <li class="list-group-item"><b>Estado:</b> Jalisco</li>
-                                    <li class="list-group-item"><b>Ciudad:</b> Guadalajara</li>
-                                    <li class="list-group-item"><b>Tarjeta:</b> **********976</li>
-                                    <li class="list-group-item"><b>Fecha de Pago:</b>22/10/2019</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
+                    <div id="divContratacionesOperador">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Optional JavaScript -->
-    <script src="/admin.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        <!-- Optional JavaScript -->
+        <script src="/admin.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
 </body>
+
 </html>

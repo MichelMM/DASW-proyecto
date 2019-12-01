@@ -22,6 +22,7 @@ let nombreContratista = document.getElementById("contName");
 let estadoContratista = document.getElementById("contState");
 let ciudadContratista = document.getElementById("contCity");
 let informacionPago = document.getElementById("payInfo");
+let comName=document.getElementById("comName");
 let fechaInicio = document.getElementById("beginDate").value;
 let fechaFin = document.getElementById("endDate").value;
 let diaPago = document.getElementById("payDate").value;
@@ -32,6 +33,7 @@ tipoMaquina.value= MACHinfo.type;
 fabricanteMaquina.value = MACHinfo.dealer;
 modeloMaquina.value = MACHinfo.model;
 nombreContratista.value = CONinfo[0].name;
+comName.value=CONinfo[0].companyName;
 estadoContratista.value = CONinfo[0].companyAdd.state;
 ciudadContratista.value = CONinfo[0].companyAdd.city;
 informacionPago.value = CONinfo[0].payInfo;
@@ -44,6 +46,7 @@ btnContratar.addEventListener("click", function () {
             model: modeloMaquina.value
         },
         Contratista: {
+            CompanyName:comName.value,
             name: nombreContratista.value,
             state: estadoContratista.value,
             city: ciudadContratista.value,
@@ -144,5 +147,4 @@ function verOperador(key){
     } 
 
 }
-
 
