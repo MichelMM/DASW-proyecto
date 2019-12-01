@@ -9,6 +9,68 @@
 // };
 // localStorage.setItem("maquina", JSON.stringify(temp));
 
+let MACHinfo = JSON.parse(localStorage.maquina);
+let CONinfo = JSON.parse(localStorage.usuario);
+console.log(MACHinfo);
+console.log(CONinfo[0]);
+
+
+let tipoMaquina = document.getElementById("MACHname");
+let fabricanteMaquina = document.getElementById("MACHdealer");
+let modeloMaquina = document.getElementById("MACHmodel");
+let nombreContratista = document.getElementById("contName");
+let estadoContratista = document.getElementById("contState");
+let ciudadContratista = document.getElementById("contCity");
+let informacionPago = document.getElementById("payInfo");
+let fechaInicio = document.getElementById("beginDate").value;
+let fechaFin = document.getElementById("endDate").value;
+let diaPago = document.getElementById("payDate").value;
+
+let btnContratar = document.getElementById("btnContratar");
+
+tipoMaquina.value= MACHinfo.type;
+fabricanteMaquina.value = MACHinfo.dealer;
+modeloMaquina.value = MACHinfo.model;
+nombreContratista.value = CONinfo[0].name;
+estadoContratista.value = CONinfo[0].companyAdd.state;
+ciudadContratista.value = CONinfo[0].companyAdd.city;
+informacionPago.value = CONinfo[0].payInfo;
+
+btnContratar.addEventListener("click", function () {
+    let contratacion = {
+        Maquina: {
+            type: tipoMaquina.value,
+            dealer: fabricanteMaquina.value,
+            model: modeloMaquina.value
+        },
+        Contratista: {
+            name: nombreContratista.value,
+            state: estadoContratista.value,
+            city: ciudadContratista.value,
+            payInfo: informacionPago.value
+        },
+        beginContractDate: fechaInicio,
+        endContractDate: fechaFin,
+        PaymentDay: diaPago
+    }
+    postContratacion(contratacion);
+})
+
+function postContratacion(datos) {
+    event.preventDefault();
+    let xhr = new XMLHttpRequest();
+    xhr.open('POST', "http://localhost:3000/contratacionesMaquina");
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send([JSON.stringify(datos)]);
+    xhr.onload = function () {
+        if (xhr.status != 201) {
+            alert(xhr.status + ': ' + xhr.statusText + 'Error, no se ha podido registrar la contratacion');
+        } else {
+            alert(xhr.responseText + '\n La contratación ha sido registrada con éxito');
+        }
+    };
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     let maquina = JSON.parse(localStorage.getItem("maquina"));
     document.getElementById("img").setAttribute("src", maquina.img);
@@ -20,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     OperatorRequest(maquina.id, () => {
         let operadores = JSON.parse(localStorage.getItem("operadorM"));
+        console.log(operadores[0]);
         let array = [];
         for (let operador in operadores) {
             // console.log(operadores[operador]);

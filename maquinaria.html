@@ -13,29 +13,29 @@
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(154, 33, 32);">
-                <a class="navbar-brand" href="principal.html">Principal</a>
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-                    aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="perfil.html">Perfil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Mensajes<span class="sr-only">(current)</span></a>
-                        </li>
-                    </ul>
-                    <form>
-                        <a class="nav-link" href="#">Cerrar Sesión</a>
-                    </form>
-                </div>
-                <div class="dropdown-menu">
-                    <h6 class="dropdown-header">Dropdown header</h6>
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                </div>
-            </nav>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(154, 33, 32);">
+        <a class="navbar-brand" href="principal.html">Principal</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="perfil.html">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mensajes<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form>
+                <a class="nav-link" href="#">Cerrar Sesión</a>
+            </form>
+        </div>
+        <div class="dropdown-menu">
+            <h6 class="dropdown-header">Dropdown header</h6>
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+        </div>
+    </nav>
     <hr style="background-color: white;">
     <div class="row">
         <div class="col-4">
@@ -46,19 +46,83 @@
                     href="#list-profile" role="tab" aria-controls="profile">Especificaciones</a>
                 <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
                     href="#list-messages" role="tab" aria-controls="messages">Operadores</a>
+                <a class="list-group-item list-group-item-action" id="list-contract-list" data-toggle="list"
+                    href="#list-contract" role="tab" aria-controls="settings">Contratar</a>
             </div>
         </div>
         <div class="col-8">
             <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade" id="list-contract" role="tabpanel" aria-labelledby="list-contract-list">
+                    <form id="formContratacion">
+                        <div class="form-row">
+                            <p><b>Datos de Maquinaria:</b></p>
+                        </div>
+                        <div class="form-row">
+                            <form action="">
+                                <div class="form-group col-auto">
+                                    <label for="MACHname">Nombre</label>
+                                    <input type="text" class="form-control" id="MACHname" disabled>
+                                </div>
+                                <div class="form-group col-auto">
+                                    <label for="MACHdealer">Fabricante</label>
+                                    <input type="text" class="form-control" id="MACHdealer" disabled>
+                                </div>
+                                <div class="form-group col-auto">
+                                    <label for="MACHmodel">Modelo</label>
+                                    <input type="text" class="form-control" id="MACHmodel" disabled>
+                                </div>
+                        </div>
+                        <div class="form-row">
+                            <p><b>Datos del contratista</b></p>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-auto">
+                                <label for="contName">Nombre</label>
+                                <input type="text" class="form-control" id="contName" disabled>
+                            </div>
+                            <div class="form-group col-auto">
+                                <label for="contState">Estado</label>
+                                <input type="text" class="form-control" id="contState" disabled>
+                            </div>
+                            <div class="form-group col-auto">
+                                <label for="contCity">Ciudad</label>
+                                <input type="text" class="form-control" id="contCity" disabled>
+                            </div>
+                            <div class="form-group col-auto">
+                                <label for="payInfo">Información de pago</label>
+                                <input type="text" class="form-control" id="payInfo" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <p><b>Datos sobre la contratación</b></p>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-auto">
+                                <label for="beginDate">Fecha de inicio</label>
+                                <input type="date" class="form-control" id="beginDate" required>
+                            </div>
+                            <div class="form-group col-auto">
+                                <label for="endDate">Fecha de finalización</label>
+                                <input type="date" class="form-control" id="endDate" required>
+                            </div>
+                            <div class="form-group col-auto">
+                                <label for="payDate">Día de pago</label>
+                                <input type="date" class="form-control" id="payDate" required>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-rounded btn-success"
+                            id=btnContratar>Contratar</button>
+                    </form>
+                </div>
                 <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
                     <table width=100%>
                         <tr>
-                            <td rowspan="5" width="20%"><img width="200px" src="" alt="" id = "img"></td>
+                            <td rowspan="5" width="20%"><img width="200px" src="" alt="" id="img"></td>
                             <td align="left" width="50%">
                                 <ul class="list-group">
-                                    <i class="list-group-item" > <b id= "type">Nombre: </b>  </i>
-                                    <li class="list-group-item" ><b id ="dealer">Fabricante: </b></li>
-                                    <li class="list-group-item" ><b id ="model">Modelo: </b></li>
+                                    <i class="list-group-item"> <b id="type">Nombre: </b> </i>
+                                    <li class="list-group-item"><b id="dealer">Fabricante: </b></li>
+                                    <li class="list-group-item"><b id="model">Modelo: </b></li>
                                 </ul>
                             </td>
                             <td></td>
@@ -70,10 +134,11 @@
                         <tr>
                             <td>
                                 <ul class="list-group">
-                                    <li class="list-group-item" > <b id= "description">Breve Descripción: </b> </li>
+                                    <li class="list-group-item"> <b id="description">Breve Descripción: </b> </li>
 
                                     <li class="list-group-item"> <b>Documentación: </b><a
-                                            href="http://maquqam.com/tecnicas/carreteras-3337/caterpillar/cs431c.html" id = "specifications">Document</a>
+                                            href="http://maquqam.com/tecnicas/carreteras-3337/caterpillar/cs431c.html"
+                                            id="specifications">Document</a>
                                     </li>
                             </td>
                             <td width="20%">
@@ -91,7 +156,7 @@
                             <td>
                                 <li class="list-group-item"> <b>Operadores</b></li>
                                 <li class="list-group-item">
-                                    <table width=100% id = "table">
+                                    <table width=100% id="table">
                                         <tr>
                                             <td rowspan="5"><img width="200px"
                                                     src="http://www.jdevoto.cl/web/wp-content/uploads/2018/04/default-user-img.jpg"
@@ -151,6 +216,8 @@
                         </tr>
                     </table>
                 </div>
+                
+
             </div>
         </div>
     </div>

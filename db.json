@@ -55,51 +55,6 @@
   ],
   "Operador": [
     {
-      "id": 3345631034,
-      "mail": "federico@gmail.com",
-      "name": "Roberto",
-      "lastname": "Zepeda Gonzalez",
-      "licensePDF": "https://www.oaklandcityid.com/uploads/4/2/1/9/4219226/new-oaklandid-site-mock-up_orig.png",
-      "officialID": "https://laopinionla.files.wordpress.com/2018/07/federal-non-compliant-large.jpg?quality=80&strip=all&w=940",
-      "city": "Guadalajara",
-      "state": "Jalisco",
-      "cellphone": "3345631034",
-      "noCRB": "https://www.evictionrecords.com/images/state-criminal-records/id-idaho-tenant-records.jpg",
-      "operatorIMG": "https://randomuser.me/api/portraits/men/21.jpg",
-      "previousJob1": {
-        "company": "Intel",
-        "referenceContact": {
-          "name": "Federico",
-          "cellphone": "3344610335"
-        }
-      },
-      "previousJob2": {
-        "company": "Intel",
-        "referenceContact": {
-          "name": "Federico",
-          "cellphone": "3344610335"
-        }
-      },
-      "previousJob3": {
-        "company": "Intel",
-        "referenceContact": {
-          "name": "Federic",
-          "cellphone": "3344610335"
-        }
-      },
-      "machinesOperated": [
-        1,
-        2
-      ],
-      "yearsExperience": "4",
-      "recomendationCard": "https://www.letterwritingservice.net/wp-content/uploads/2018/06/reference-letter-for-green-card-eb2-example.png",
-      "type": "operador",
-      "RFC": "lvndwoncuqiodcnilqbevonqwnvoqndiovn",
-      "available": "Por hora",
-      "description": "soy honesto",
-      "status": "active"
-    },
-    {
       "id": "3378195308",
       "name": "Kevin",
       "lastname": "Moreno",
@@ -188,6 +143,50 @@
       "recomendationCard": "https://encrypted-tbn0.gstatic.com/images",
       "description": "Soy un trabajador Trabajndo en trabajos que requieren de mi atencion trabajando",
       "status": "inactivo"
+    },
+    {
+      "id": "6754234567",
+      "name": "julio",
+      "lastname": "gomez",
+      "mail": "jg@gmail.com",
+      "licensePDF": "http://cursos.iteso.mx/course/view.php?id=739",
+      "officialID": "http://cursos.iteso.mx/course/view.php?id=739",
+      "city": "Guadalajara",
+      "state": "Jalisco",
+      "cellphone": "6754234567",
+      "operatorIMG": "https://randomuser.me/api/portraits/men/44.jpg",
+      "noCRB": "http://cursos.iteso.mx/course/view.php?id=739",
+      "yearsExperience": "2",
+      "available": "Por hora",
+      "rfc": "567845g",
+      "user": "julio",
+      "password": "1",
+      "type": "operador",
+      "previousJob1": {
+        "company": "",
+        "referenceContact": {
+          "name": "",
+          "cellphone": ""
+        }
+      },
+      "previousJob2": {
+        "company": "",
+        "referenceContact": {
+          "name": "",
+          "cellphone": ""
+        }
+      },
+      "previousJob3": {
+        "company": "",
+        "referenceContact": {
+          "name": "",
+          "cellphone": ""
+        }
+      },
+      "machinesOperated": [],
+      "recomendationCard": "",
+      "description": "",
+      "status": "active"
     }
   ],
   "Maquinaria": [
@@ -266,6 +265,78 @@
       "email": "admin@gmail.com",
       "password": "1",
       "img": "https://png.pngtree.com/png-vector/20190704/ourmid/pngtree-administration-icon-in-trendy-style-isolated-background-png-image_1538647.jpg"
+    }
+  ],
+  "contratacionesOperador": [
+    {
+      "id": "",
+      "Operador": {
+        "name": "",
+        "state": "",
+        "city": ""
+      },
+      "Contratista": {
+        "name": "",
+        "state": "",
+        "city": "",
+        "payInfo": ""
+      },
+      "beginContractDate": "",
+      "endContractDate": "",
+      "PaymentDay": ""
+    },
+    {
+      "Operador": {
+        "name": "Kevin",
+        "state": "Jalisco",
+        "city": "Guadalajara"
+      },
+      "Contratista": {
+        "name": "Miguel",
+        "state": "Jalisco",
+        "city": "Guadalajara",
+        "payInfo": "Tarjeta"
+      },
+      "beginContractDate": "1999-07-05",
+      "endContractDate": "2019-07-05",
+      "PaymentDay": "2019-07-25",
+      "id": "h-VEUHS"
+    }
+  ],
+  "contratacionesMaquina": [
+    {
+      "id": "",
+      "Maquina": {
+        "type": "",
+        "dealer": "",
+        "model": ""
+      },
+      "Contratista": {
+        "name": "",
+        "state": "",
+        "city": "",
+        "payInfo": ""
+      },
+      "beginContractDate": "",
+      "endContractDate": "",
+      "PaymentDay": ""
+    },
+    {
+      "Maquina": {
+        "type": "Mini excavador",
+        "dealer": "Kobelco SK30SR-5",
+        "model": "3TNV88"
+      },
+      "Contratista": {
+        "name": "Miguel",
+        "state": "Jalisco",
+        "city": "Guadalajara",
+        "payInfo": "Tarjeta"
+      },
+      "beginContractDate": "",
+      "endContractDate": "",
+      "PaymentDay": "",
+      "id": "A9EzSPv"
     }
   ]
 }
