@@ -69,6 +69,7 @@ informacionPago.value = CONinfo[0].payInfo;
 btnContratar.addEventListener("click", function () {
     let contratacion = {
         Operador: {
+            image: OPinfo.operatorIMG, 
             name: nombreOperador.value,
             state: estadoOperador.value,
             city: ciudadOperador.value

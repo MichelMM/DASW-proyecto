@@ -41,6 +41,7 @@ informacionPago.value = CONinfo[0].payInfo;
 btnContratar.addEventListener("click", function () {
     let contratacion = {
         Maquina: {
+            image: MACHinfo.img,
             type: tipoMaquina.value,
             dealer: fabricanteMaquina.value,
             model: modeloMaquina.value
