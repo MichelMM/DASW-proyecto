@@ -3,9 +3,16 @@ let arrayContratistas = [];
 let arrayMaquinarias = [];
 let arrayContraOperador = [];
 let arrayContraMaquina = [];
+let operadores;
+let contratistas;
+let maquinarias;
+let ContratacionesOperador;
+let ContratacionesMaquina;
+
+
 document.addEventListener("DOMContentLoaded", () => {
     OperadorRequest(null, () => {
-        let operadores = JSON.parse(localStorage.operadores);
+        operadores = JSON.parse(localStorage.operadores);
         for (let operador in operadores) {
             let HTMLOperador =
                 `<table width=100%>
@@ -38,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     ContratistaRequest(null, () => {
-        let contratistas = JSON.parse(localStorage.contratistas);
+        contratistas = JSON.parse(localStorage.contratistas);
         for (let contratista in contratistas) {
             let HTMLContratista =
                 `<table>
@@ -71,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     MaquinariaRequest(null, () => {
-        let maquinarias = JSON.parse(localStorage.maquinarias);
+        maquinarias = JSON.parse(localStorage.maquinarias);
         console.log(maquinarias);
         for (let maquinaria in maquinarias) {
             let HTMLMaquinaria =
@@ -107,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     ContratacionesOperadorRequest(null, () => {
-        let ContratacionesOperador = JSON.parse(localStorage.contratacionesOperador);
+        ContratacionesOperador = JSON.parse(localStorage.contratacionesOperador);
         for (let contratacionOperador in ContratacionesOperador) {
             let HTMLcontratacionOperador =
                 `
@@ -150,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     ContratacionesMaquinaRequest(null, () => {
-        let ContratacionesMaquina = JSON.parse(localStorage.contratacionesMaquina);
+        ContratacionesMaquina = JSON.parse(localStorage.contratacionesMaquina);
         for (let contratacionMaquina in ContratacionesMaquina) {
             let HTMLcontratacionMaquina =
                 `
@@ -467,7 +474,294 @@ function DeleteMaquinaria(key) {
 
 }
 
-function EditMaquinaria(key){
+function EditMaquinaria(key) {
     localStorage.setItem("maquina", key);
-    window.location.href="/editMaquinaria.html";
+    window.location.href = "/editMaquinaria.html";
+}
+
+let arrayOperadoresSearch = [];
+
+function buscarOperador() {
+    event.preventDefault();
+    arrayOperadoresSearch = [];
+    let texto = document.getElementById("operadorSearch");
+    if (texto.value == "") {
+        fillOperadores();
+    } else {
+        for (let key in operadores) {
+            if (operadores[key].name.search(texto.value) == 0) {
+                let HTMLOperador =
+                    `<table width=100%>
+                        <tr>
+                            <td rowspan="5" width="20%"><img width="200px"
+                                    src="${operadores[key].operatorIMG}" alt=""></td>
+                            <td align="left" width="50%">
+                                <ul class="list-group">
+                                    <li class="list-group-item"> <b>Nombre:</b> ${operadores[key].name} ${operadores[key].lastname}</li>
+                                    <li class="list-group-item"> <b>Años de Experiencia:</b> ${operadores[key].yearsExperience} años</li>
+                                    <li class="list-group-item"><b>Estado:</b> ${operadores[key].state}</li>
+                                    <li class="list-group-item"><b>Ciudad:</b> ${operadores[key].city}</li>
+                                    <li class="list-group-item"><b>Status:</b> ${operadores[key].status}</li>
+                                </ul>
+                                 <a href="/mensajes.html" type="button" class="btn btn-primary btn-rounded" >Contactar</a>
+                                <button onclick=ActivarOperador(${operadores[key].id}) type="button" class="btn btn-primary btn-rounded btn-success">Activar</button>
+                                <button onclick=DesactivarOperador(${operadores[key].id}) type="button" class="btn btn-primary btn-rounded btn-warning">Desactivar</button>
+                                <button onclick=DeleteOperador(${operadores[key].id}) type="button" class="btn btn-primary btn-rounded btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Eliminar</button></<button>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+            `
+                arrayOperadoresSearch.push(HTMLOperador);
+            }
+
+        }
+        fillOperadoresSearch();
+    }
+
+}
+
+function fillOperadoresSearch() {
+    document.getElementById("divOperadores").innerHTML = arrayOperadoresSearch.join("");
+}
+
+
+let arrayContratistaSearch = [];
+
+function buscarContratista() {
+    event.preventDefault();
+    arrayContratistaSearch = [];
+    let texto = document.getElementById("SearchContratista");
+    if (texto.value == "") {
+        fillContratistas();
+    } else {
+        for (let key in contratistas) {
+            if (contratistas[key].companyName.search(texto.value) == 0) {
+                let HTMLContratista =
+                    `<table>
+            <tr>
+                <td rowspan="5" width="20%"><img width="200px"
+                        src="${contratistas[key].img}" alt=""></td>
+            
+                <td align="left" width="50%">
+                    <ul class="list-group">
+                        <li class="list-group-item"> <b>Nombre:</b> ${contratistas[key].name} ${contratistas[key].lastname}</li>
+                        <li class="list-group-item"><b>Compañia:</b> ${contratistas[key].companyName}</li>
+                        <li class="list-group-item"><b>Estado:</b>  ${contratistas[key].companyAdd.state}</li>
+                        <li class="list-group-item"><b>Ciudad:</b> ${contratistas[key].companyAdd.city}</li>
+                    </ul>
+                    <a href="/mensajes.html" type="button" class="btn btn-primary btn-rounded" >Contactar</a>
+                    <button onclick=DeleteContratista(${contratistas[key].id}) type="button" class="btn btn-primary btn-rounded btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Eliminar Contratista</button></<button>
+                </td>
+                <td>
+            
+                </td>
+            </tr>
+            </table>
+            `
+                arrayContratistaSearch.push(HTMLContratista);
+            }
+
+        }
+        fillContratistasSearch();
+    }
+}
+
+function fillContratistasSearch() {
+    document.getElementById("divContratistas").innerHTML = arrayContratistaSearch.join("");
+}
+
+
+let arrayMaquinariasSearch = [];
+
+function buscarMaquinaria() {
+    event.preventDefault();
+    arrayMaquinariasSearch = [];
+    let texto1 = document.getElementById("SearchFabricante");
+    let texto2 = document.getElementById("SearchModelo");
+    if (texto1.value == "" && texto2.value == "") {
+        fillMaquinarias();
+    } else if (texto1.value != "" && texto2.value == "") {
+        for (let key in maquinarias) {
+            if (maquinarias[key].dealer.search(texto1.value) == 0) {
+                let HTMLMaquinaria =
+                    `<table width=100%>
+                <tr>
+                    <td rowspan="5" width="20%"><img width="200px"
+                            src="${maquinarias[key].img}"
+                            alt=""></td>
+                    <td align="left" width="50%">
+                        <ul class="list-group">
+                            <i class="list-group-item"> <b>Nombre:</b> ${maquinarias[key].type} </i>
+                            <li class="list-group-item"><b>Fabricante:</b> ${maquinarias[key].dealer}</li>
+                            <li class="list-group-item"><b>Modelo:</b> ${maquinarias[key].model}</li>
+                            <li class="list-group-item"> <b>Unidades Disponibles:</b> ${maquinarias[key].units}</li>
+                            <li class="list-group-item"><b>Costo por Hora:</b>  ${maquinarias[key].hourCost}</li>
+                            <li class="list-group-item"><b>Costo por Día:</b>  ${maquinarias[key].dayCost}</li>
+                            <li class="list-group-item"><b>Costo por Semana:</b>  ${maquinarias[key].weekCost}</li>
+                            <li class="list-group-item"><b>Transporte:</b>  ${maquinarias[key].transport}</li>
+                        </ul>
+                        <button onclick=EditMaquinaria(${maquinarias[key].id}) type="button" class="btn btn-primary btn-rounded" data-toggle="button" aria-pressed="false" autocomplete="off">Editar Maquinaria</button></<button>
+                        <button onclick=DeleteMaquinaria(${maquinarias[key].id}) type="button" class="btn btn-primary btn-rounded btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Eliminar Maquinaria</button></<button>
+                        </td>
+                    <td></td>
+                </tr>
+            </table>
+            `
+                arrayMaquinariasSearch.push(HTMLMaquinaria);
+            }
+
+        }
+        fillMaquinariasSearch();
+
+    } else if (texto1.value == "" && texto2.value != "") {
+        for (let key in maquinarias) {
+            if (maquinarias[key].model.search(texto2.value) == 0) {
+                let HTMLMaquinaria =
+                    `<table width=100%>
+                <tr>
+                    <td rowspan="5" width="20%"><img width="200px"
+                            src="${maquinarias[key].img}"
+                            alt=""></td>
+                    <td align="left" width="50%">
+                        <ul class="list-group">
+                            <i class="list-group-item"> <b>Nombre:</b> ${maquinarias[key].type} </i>
+                            <li class="list-group-item"><b>Fabricante:</b> ${maquinarias[key].dealer}</li>
+                            <li class="list-group-item"><b>Modelo:</b> ${maquinarias[key].model}</li>
+                            <li class="list-group-item"> <b>Unidades Disponibles:</b> ${maquinarias[key].units}</li>
+                            <li class="list-group-item"><b>Costo por Hora:</b>  ${maquinarias[key].hourCost}</li>
+                            <li class="list-group-item"><b>Costo por Día:</b>  ${maquinarias[key].dayCost}</li>
+                            <li class="list-group-item"><b>Costo por Semana:</b>  ${maquinarias[key].weekCost}</li>
+                            <li class="list-group-item"><b>Transporte:</b>  ${maquinarias[key].transport}</li>
+                        </ul>
+                        <button onclick=EditMaquinaria(${maquinarias[key].id}) type="button" class="btn btn-primary btn-rounded" data-toggle="button" aria-pressed="false" autocomplete="off">Editar Maquinaria</button></<button>
+                        <button onclick=DeleteMaquinaria(${maquinarias[key].id}) type="button" class="btn btn-primary btn-rounded btn-danger" data-toggle="button" aria-pressed="false" autocomplete="off">Eliminar Maquinaria</button></<button>
+                        </td>
+                    <td></td>
+                </tr>
+            </table>
+            `
+                arrayMaquinariasSearch.push(HTMLMaquinaria);
+            }
+
+        }
+        fillMaquinariasSearch();
+    } else {
+        alert("Favor de seleccionar solo un campo");
+    }
+}
+
+function fillMaquinariasSearch() {
+    document.getElementById("divMaquinarias").innerHTML = arrayMaquinariasSearch.join("");
+}
+
+
+let arrayContraOperadorSearch = [];
+
+function buscarContOp() {
+    event.preventDefault();
+    arrayContraOperadorSearch = [];
+    let texto = document.getElementById("datetimepicker2");
+    if (texto.value == "") {
+        fillContratacionesOperador();
+    } else {
+        for (let key in ContratacionesOperador) {
+            if (ContratacionesOperador[key].beginContractDate.search(texto.value) == 0) {
+                let HTMLcontratacionOperador =
+                    `
+                <div style="background:rgb(250, 248, 248)" class="form-row rounded">
+                <table> 
+                <th>Compañia: ${ContratacionesOperador[key].Contratista.CompanyName} </th>
+                <tr>
+                            <td>
+                                <ul class="list-group"><b></b>
+                                    <li class="list-group-item"> <b>Nombre:</b> ${ContratacionesOperador[key].Contratista.name}</li>
+                                    <li class="list-group-item"><b>Estado:</b> ${ContratacionesOperador[key].Contratista.state}</li>
+                                    <li class="list-group-item"><b>Ciudad:</b> ${ContratacionesOperador[key].Contratista.city}</li>
+                                    <li class="list-group-item"><b>Tarjeta:</b> ${ContratacionesOperador[key].Contratista.payInfo}</li>
+                                </ul>
+                            </td>
+                            <td align="left">
+                                <ul class="list-group">Operador
+                                <li class="list-group-item"> <b>Nombre:</b> ${ContratacionesOperador[key].Operador.name}</li>
+                                <li class="list-group-item"><b>Estado:</b> ${ContratacionesOperador[key].Operador.state}</li>
+                                <li class="list-group-item"><b>Ciudad:</b> ${ContratacionesOperador[key].Operador.city}</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="list-group">Datos de Contratación
+                                    <li class="list-group-item"><b>Fecha Contratacion:</b>${ContratacionesOperador[key].beginContractDate}</li>
+                                    <li class="list-group-item"><b>Fecha Fin Contratacion:</b>${ContratacionesOperador[key].endContractDate}</li>
+                                    <li class="list-group-item"><b>Fecha de Pago:</b>${ContratacionesOperador[key].PaymentDay}</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+            `
+                arrayContraOperadorSearch.push(HTMLcontratacionOperador);
+            }
+
+        }
+        fillContratacionesOperadorSearch();
+    }
+}
+
+function fillContratacionesOperadorSearch() {
+    document.getElementById("divContratacionesOperador").innerHTML = arrayContraOperadorSearch.join("");
+}
+
+let arrayContraMaquinaSearch = [];
+
+function buscarContMa() {
+    event.preventDefault();
+    arrayContraMaquinaSearch = [];
+    let texto = document.getElementById("datetimepicker1");
+    if (texto.value == "") {
+        fillContratacionesMaquina();
+    } else {
+        for (let key in ContratacionesMaquina) {
+            if (ContratacionesMaquina[key].beginContractDate.search(texto.value) == 0) {
+                let HTMLcontratacionMaquina =
+                `
+                <div style="background:rgb(250, 248, 248)" class="form-row rounded">
+                <table> 
+                <th>Compañia: ${ContratacionesMaquina[key].Contratista.CompanyName} </th>
+                <tr>
+                            <td>
+                                <ul class="list-group"><b>Contratista</b>
+                                    <li class="list-group-item"> <b>Nombre:</b> ${ContratacionesMaquina[key].Contratista.name}</li>
+                                    <li class="list-group-item"><b>Estado:</b> ${ContratacionesMaquina[key].Contratista.state}</li>
+                                    <li class="list-group-item"><b>Ciudad:</b> ${ContratacionesMaquina[key].Contratista.city}</li>
+                                    <li class="list-group-item"><b>Tarjeta:</b> ${ContratacionesMaquina[key].Contratista.payInfo}</li>
+                                </ul>
+                            </td>
+                            <td align="left">
+                                <ul class="list-group"><b>Máquina</b>
+                                <li class="list-group-item"><b>Nombre:</b> ${ContratacionesMaquina[key].Maquina.type}<li>
+                                <li class="list-group-item"><b>Modelo:</b> ${ContratacionesMaquina[key].Maquina.model}</li>
+                                <li class="list-group-item"><b>Marca:</b> ${ContratacionesMaquina[key].Maquina.dealer}</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul class="list-group"><b>Datos de Contratación</b>
+                                    <li class="list-group-item"><b>Fecha Contratacion:</b>${ContratacionesMaquina[key].beginContractDate}</li>
+                                    <li class="list-group-item"><b>Fecha Fin Contratacion:</b>${ContratacionesMaquina[key].endContractDate}</li>
+                                    <li class="list-group-item"><b>Fecha de Pago:</b>${ContratacionesMaquina[key].PaymentDay}</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    </div>
+            `
+            arrayContraMaquinaSearch.push(HTMLcontratacionMaquina);
+            }
+
+        }
+        fillContratacionesMaquinaSearch();
+    }
+}
+
+function fillContratacionesMaquinaSearch() {
+    document.getElementById("divContratacionesMaquinaria").innerHTML = arrayContraMaquinaSearch.join("");
 }
