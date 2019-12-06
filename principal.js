@@ -222,3 +222,9 @@ function busqueda() {
     }
 
 }
+
+let tipo = JSON.parse(localStorage.usuario)[0].type;
+
+if(tipo == "operador"){
+    document.getElementsByClassName("nav-link")[2].setAttribute("hidden", "");
+}
